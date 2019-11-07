@@ -1,0 +1,110 @@
+﻿
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section adminCss{
+    <link href="~/Areas/Admin/assets/cooladmin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/Areas/Admin/assets/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="~/Areas/Admin/assets/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="~/Areas/Admin/assets/cooladmin/css/theme.css" rel="stylesheet" media="all">
+}
+<h2 class="title-1 m-b-25 ml-5 mt-3">İcmal</h2>
+<div class="row m-t-25" style="justify-content:space-around">
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c1">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                        <span style="font-size:50px; color:white"> @ViewBag.UsersCount</span>
+                    </div>
+                    <div class="text">
+                        
+                        <span>members online</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+                <div class="overview-box clearfix">
+                    <div class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span style="font-size:50px; color:white"> @ViewBag.OrdersCount</span>
+                    </div>
+                    <div class="text">
+                      
+                        <span>items solid</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="overview-item overview-item--c3">
+            <div class="overview__inner">
+                <a href="@Url.Action("Create","AddProducts")">
+                    <div class="overview-box clearfix">
+                        <div class="text">
+                            <h2 style="font-size:32px;padding-bottom:33px">Add Product</h2>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="title-1 m-b-25 ml-5">Sifarişlər</h2>
+        <div class="table-responsive table--no-card m-b-40">
+            <table class="table table-borderless table-striped table-earning">
+                <tr>
+                    <th>
+                        Fulname
+                    </th>
+                    <th>
+                       Phone
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in ViewBag.allUsers)
+                {
+                    <tr>
+
+                        <td>
+                            @item.FirstName
+                            @item.LastName
+
+                        </td>
+                        <td>
+                            @item.Phone
+                        </td>
+                        <td>
+                            @item.Email
+                        </td>
+
+                        <td>
+                           <a href="@Url.Action( "Details","Orders", new { id = item.Id })">İnfo</a> 
+                        </td>
+                    </tr>
+                }
+
+            </table>
+          
+        </div>
+    </div>
+
+</div>

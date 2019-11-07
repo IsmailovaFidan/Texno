@@ -1,0 +1,968 @@
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Claims.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\EntityFramework.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Owin.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\WebGrease.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\EntityFramework.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\FakeData.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\FakeData.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Claims.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\FakeData.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Owin.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\WebGrease.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\FakeData.pdb
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\user\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Claims.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\FakeData.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Owin.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\WebGrease.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\AutoMapper.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\FakeData.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\PagedList.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\PagedList.Mvc.dll
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\PagedList.xml
+C:\Users\HP\Desktop\TechBack-master\TexnoGallery\bin\PagedList.Mvc.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Claims.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\AutoMapper.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\EntityFramework.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\FakeData.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Owin.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\PagedList.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\PagedList.Mvc.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\WebGrease.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\AutoMapper.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\FakeData.pdb
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\PagedList.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\PagedList.Mvc.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\EntityFramework.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\obj\Debug\TexnoGallery.csproj.CoreCompileInputs.cache
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\Elxan\Desktop\{!Elxan Quliyev!}\Texno\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.IO.Pipes.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Claims.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\AutoMapper.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\EntityFramework.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\FakeData.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Owin.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\PagedList.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\PagedList.Mvc.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\WebGrease.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\AutoMapper.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\FakeData.pdb
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\PagedList.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\PagedList.Mvc.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\EntityFramework.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\obj\Debug\TexnoGallery.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\HP\Desktop\TexNew\Texno\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Net.Http.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\AutoMapper.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\EntityFramework.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\FakeData.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Http.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Options.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\NgrokAspNetCore.Lib.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Owin.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\PagedList.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\PagedList.Mvc.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\ServiceStack.Text.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Buffers.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Memory.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Numerics.Vectors.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Text.Encodings.Web.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Cors.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.Cors.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Twilio.AspNet.Common.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Twilio.AspNet.Mvc.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Twilio.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\WebGrease.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\AutoMapper.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\EntityFramework.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\FakeData.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Http.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Options.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\PagedList.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\PagedList.Mvc.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\ServiceStack.Text.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Buffers.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Memory.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Numerics.Vectors.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Text.Encodings.Web.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.Cors.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Twilio.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\Elxan\Desktop\examples\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\TexnoGallery.dll.config
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\TexnoGallery.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\TexnoGallery.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csc.exe
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csc.exe.config
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csc.rsp
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csi.exe
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csi.exe.config
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\csi.rsp
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.AppContext.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Console.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.IO.Compression.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Net.Http.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.ValueTuple.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\vbc.exe
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\vbc.exe.config
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\vbc.rsp
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Antlr3.Runtime.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\AutoMapper.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\EntityFramework.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\EntityFramework.SqlServer.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\FakeData.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Http.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Options.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Newtonsoft.Json.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\NgrokAspNetCore.Lib.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Owin.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\PagedList.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\PagedList.Mvc.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\ServiceStack.Text.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Buffers.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Memory.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Net.Http.Formatting.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Numerics.Vectors.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Text.Encodings.Web.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Cors.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Helpers.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.Cors.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.WebHost.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Mvc.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Optimization.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Razor.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Twilio.AspNet.Common.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Twilio.AspNet.Mvc.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Twilio.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\WebGrease.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\AutoMapper.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\EntityFramework.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\EntityFramework.SqlServer.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\FakeData.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Http.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Options.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Newtonsoft.Json.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\PagedList.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\PagedList.Mvc.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\ServiceStack.Text.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Buffers.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Memory.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Net.Http.Formatting.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Numerics.Vectors.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Text.Encodings.Web.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.ValueTuple.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.Cors.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Http.WebHost.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Helpers.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Mvc.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Optimization.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.Razor.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Twilio.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Antlr3.Runtime.pdb
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.csprojAssemblyReference.cache
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.dll
+C:\Users\Elxan\source\repos\TexnoNew\TexnoGallery\obj\Debug\TexnoGallery.pdb

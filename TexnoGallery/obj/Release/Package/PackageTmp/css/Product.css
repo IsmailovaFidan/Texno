@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Quicksand");
+.sliderr {
+  border: 1px solid rgba(134, 127, 127, 0.8); }
+
+.slider-png {
+  margin-top: 30px; }
+
+.div-text {
+  margin: 20px 0; }
+
+.slick-prev {
+  z-index: 10; }
+  .slick-prev:before {
+    color: #000 !important;
+   
+    font-weight: 900;
+  }
+
+.slick-next {
+  z-index: 10; }
+  .slick-next:before {
+    color: #000 !important;
+
+    font-weight: 900;
+  }
+
+.newarrival {
+  background: green;
+  width: 50px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold; }
+
+.price {
+  color: #FE980F;
+  font-size: 26px;
+  font-weight: bold;
+  padding-top: 20px; }
+
+.cart {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 28px;
+    background-color: #ffc107;
+    border: none;
+    outline: none;
+}
+
+    .cart:hover {
+        box-shadow: 2px 5px 10px rgba(134, 127, 127, 0.8);
+    }
+
+.cart1 {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 58px;
+    background-color: #044f15;
+    border: none;
+}
+
+    .cart1:hover {
+        box-shadow: 2px 5px 10px rgba(134, 127, 127, 0.8);
+    }
+
+.slider {
+  margin-top: 10px; }
+  .slider .bx-pager img {
+    max-width: 100px; }
+
+.TableProduct {
+  margin-top: 20px; }
+
+.product-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto; }
+
+.instructions {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto; }
+
+code {
+  color: dodgerblue; }
+
+body {
+  font-family: 'Lora';
+  line-height: 1.8; }
+
+h1 {
+  font-family: 'Quicksand'; }
+
+/*# sourceMappingURL=Product.css.map */

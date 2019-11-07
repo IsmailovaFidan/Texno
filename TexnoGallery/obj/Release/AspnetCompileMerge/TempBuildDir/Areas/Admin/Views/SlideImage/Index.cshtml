@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TexnoGallery.Models.Slide>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section adminCss{
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/photoswipe.css">
+
+}
+
+<h2 class="text-center mt-3">Slide</h2>
+
+<span class="text-right mr-3 mb-2 mt-2" style="font-size:15px;">
+    <a style="padding:10px 15px;background-color:brown; border-radius:5px; color:white" href=@Url.Action("Create","SlideImage")>Add a new photo</a>
+
+</span>
+
+<div class="my-gallery card-body row gallery-with-description mb-3">
+  
+        @foreach (var item in Model)
+        {
+
+            <figure class="col-xl-3 col-sm-6">
+                <img src="@item.SlideImg" itemprop="thumbnail" alt="Image description" style="width:100%; height:100%; border:1px solid #ddd">
+                <div class="caption text-center" style="border: 1px solid #e4e4e4; padding:10px 0;border-top:none">
+                    <a href=@Url.Action("Edit","SlideImage",new { id=item.Id}) class="btn btn-primary btn-sm">
+                         Edit
+                    </a>
+                    <button cus-id="@item.Id" class="btn btn-sm deleteSlide" style="background-color:brown; color:white">
+                         Delete
+                    </button>
+                </div>
+
+            </figure>
+
+
+        }
+
+    </div>
+
+    @section adminJs{
+        <script>
+            $(".deleteSlide").on("click", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete this photo?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/products/" + $(this).attr("cus-id"),
+                            method: "Delete",
+                            success: function () {
+                                console.log($(this))
+                                button.parents("figure").remove("figure")
+                            }
+                        })
+                    }
+                });
+            })
+        </script>
+        }
+
+
+
+
+

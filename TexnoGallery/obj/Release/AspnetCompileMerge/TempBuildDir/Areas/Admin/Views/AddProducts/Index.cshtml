@@ -1,0 +1,121 @@
+﻿@model IPagedList<TexnoGallery.Models.Product>
+
+@using PagedList;
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-center mt-3">My Products</h2>
+
+<span class="text-right mr-3 mb-2 mt-2" style="font-size:15px;">
+    <a style="padding:10px 15px;background-color:brown; border-radius:5px; color:white" href=@Url.Action("Create","AddProducts")>Add Product</a>
+</span>
+
+<select class="browser-default custom-select mb-5" style="width:250px">
+
+    <option selected enabled>Select Category</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.SubCategoryId">@item.SubCategory.Name</option>
+    }
+
+</select>
+
+<table class="table">
+    <tr>
+        <th>
+            Image
+        </th>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Count
+        </th>
+        @*<th>
+            Discount
+        </th>*@
+
+        <th>
+            Create Date
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="width:20%">
+                <img src="@item.Image" style="width:50%" alt="Alternate Text" />
+            </td>
+            <td>
+                @if (item.Name.Length > 30)
+    {
+                    @Html.Raw(item.Name.Substring(0, 30))
+
+                    <a style="color:#000;" href="@Url.Action("Edit", "AddProducts", new { id = item.Id })">[...]</a>
+    }
+    else
+    {
+                    @Html.Raw(item.Name)
+    }
+              
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>*@
+        <td>
+            @String.Format("{0:MMMM dd, yyyy}", item.AddDate)
+        </td>
+
+            <td style="width:25%">
+                <div class="Elements">
+                    <a href=@Url.Action("Edit","AddProducts",new { id=item.Id}) class="mr-3" style="padding:10px 10px;background-color:#4c4af4;color:#fff; border-radius:5px">
+                        <i style="pointer-events:none" class="far fa-edit"></i>
+                    </a>
+                    <a href=@Url.Action("AddImages","AddProducts",new { id=item.Id}) class="mr-3" style="padding:10px 10px;background-color:#4c4af4;color:#fff; border-radius:5px">
+                        <i style="pointer-events:none" class="far fa-images"></i>
+                    </a>
+                    <a href="@Url.Action("Index","Options",new { id=item.Id})"  style="padding:10px 10px;background-color:#4c4af4;color:#fff; border-radius:5px">
+                        <i class="fas fa-filter"></i>
+
+                    </a>
+                    <a href=@Url.Action("Delete","AddProducts",new { id=item.Id}) style="padding:10px 10px;background-color:brown;color:#fff; border-radius:5px">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                    
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pagedList pagination">
+                @Html.PagedListPager(Model, Page => Url.Action("Index", "AddProducts", new { Page }), PagedListRenderOptions.Classic)
+            </div>
+        </div>
+        </div>
+    </div>
+        @section adminJs{
+            <script>
+                $(document).ready(function () {
+                    $("#Product").DataTable();
+                })
+            </script>
+        }

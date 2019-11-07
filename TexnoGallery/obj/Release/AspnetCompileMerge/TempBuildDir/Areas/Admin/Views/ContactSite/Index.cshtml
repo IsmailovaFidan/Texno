@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TexnoGallery.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-center mt-3 mb-5">Contact</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Mobile
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Working Time
+        </th>
+        <th>
+            Adress
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            <a class="btn btn-primary btn-sm" name="Edit" href=@Url.Action("Edit","ContactSite",new { id=item.Id})>
+                <i class="far fa-edit"></i> Edit
+            </a>
+    </tr>
+}
+
+</table>

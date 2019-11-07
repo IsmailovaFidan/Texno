@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TexnoGallery.Models.Brend>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section adminCss{
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/photoswipe.css">
+
+}
+<h2 class="text-center mt-3 mb-2">Brends</h2>
+
+<span class="text-right mr-3 mb-2 mt-2" style="font-size:15px;">
+    <a style="padding:10px 15px;background-color:brown; border-radius:5px; color:white" href=@Url.Action("Create","Brends")>Add a new photo</a>
+
+</span>
+
+
+<div class="my-gallery card-body row gallery-with-description mb-3">
+    @foreach (var item in Model)
+    {
+
+        <figure class="col-xl-3 col-sm-6">
+            <img src="@item.BrendImg" itemprop="thumbnail" alt="Image description" style="width:100%; height:60%; border:1px solid #ddd">
+            <div class="caption text-center" style="border: 1px solid #e4e4e4; padding:10px 0;border-top:1px solid #ddd">
+                <a href=@Url.Action("Edit","Brends",new { id=item.id}) class="btn btn-primary btn-sm">
+                    <i style="pointer-events:none" class="far fa-edit"></i> Edit
+                </a>
+                <a href=@Url.Action("Delete","Brends",new { id=item.id}) class="btn btn-sm" style="background-color:brown; color:white">
+                    <i class="far fa-trash-alt"></i> Delete
+                </a>
+            </div>
+
+        </figure>
+
+    }
+
+
+</div>

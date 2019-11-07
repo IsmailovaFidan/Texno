@@ -1,0 +1,138 @@
+﻿@using TexnoGallery.ViewModel.Default
+@model DefaultViewModel
+
+
+<div class="header-yel ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <div class="two-menu text-center">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                        <span>kateqoriyalar</span>
+                    </a>
+                </div>
+
+                <div class="menu-vertical">
+                    <ul class="menu-content">
+                        <li class="menu-close">
+                            <i class="fas fa-times"></i>
+                        </li>
+                        @foreach (var item in Model.CategoryName)
+                        {
+                            <li class="laber-cart level-1 parent">
+                                <a href="@Url.Action("product","product",new { id=item.Id})" class="laber">
+                                    <div class="laber-content">
+                                        <i class="@item.Icons"></i>
+                                        <span class="pr-2">@item.Name</span>
+                                    </div>
+                                </a>
+                                <i class="fas fa-chevron-right laber-icon"></i>
+                                <div class="drop-menu  pl-3">
+                                    <div class="drop-menu-title pl-3">
+                                        @item.Name
+                                    </div>
+                                    <ul>
+                                        @foreach (var subitem in item.SubCategories)
+                                        {
+
+                                            <li class="pb-2">
+                                                <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id})">@subitem.Name</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-6">
+                @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form" }))
+                {
+                    <div class="input-group mt-2">
+                        <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
+                        <div class="input-group-append">
+                            <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3">
+                <a class="btn text-white btn-pc" href="@Url.Action("PcTopla","Product")">Pc Topla +</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="resp-categ">
+        <div class="alt-categ mt-3 mb-3">
+            <button class="cat-link" onclick="openCat()">Kategoriya</button>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<div class="col-2 col-sm-2 col-md-2">
+    <div id="myCat" class="sidecat mr-2">
+        <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeCat()">&times;</a>
+        <p style="font-size:30px; color:#ffc107" class="pl-3">Kateqoriyalar</p>
+        <div class="d-flex pr-3 cat-pc" style="justify-content:flex-end;">
+            <input class="cat-search" type="text" />
+            <a href="#">
+                <i class="fas fa-search" autofocus="true" placeholder="Search..." style="padding:10px;color:white;"></i>
+            </a>
+                <p style="color:#fff; font-size:25px;">
+                <a href="@Url.Action("PcTopla","Product")">
+                    Pc Topla
+                </a>
+            </p>
+            
+        </div>
+        <div>
+            <ul>
+                @foreach (var item in Model.CategoryName)
+                {
+                    <li style="display:flex; justify-content:space-between;">
+                        <a href="">@item.Name</a>
+                        <i class="fas fa-chevron-right mr-5 mt-3 text-light"></i>
+
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function openCat() {
+        document.getElementById("myCat").style.width = "100%";
+        $("body").css("overflow-y","hidden")
+        
+  
+    }
+
+    function closeCat() {
+        document.getElementById("myCat").style.width = "0";
+        $("body").css("overflow-y","scroll")
+
+
+    }
+</script>
+
+
+
+

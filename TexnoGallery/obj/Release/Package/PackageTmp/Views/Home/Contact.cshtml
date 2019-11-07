@@ -1,0 +1,83 @@
+﻿@using TexnoGallery.ViewModel.Default
+@model DefaultViewModel
+
+<!--Contact-->
+<div class="mapouter mt-5" data-aos="fade-right" style="width: 100%">
+    <div class="gmap_canvas" style="width: 100%">
+        <iframe style="width:100% " height="600" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=texno%20gallery&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de"></a>
+    </div>
+    <style>
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 600px;
+            width: 1080px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 600px;
+            width: 1000px;
+        }
+    </style>
+</div>
+<section id="Contact">
+    <div class="container  mt-5 mb-5">
+
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="question">
+                    <h4><b>Bizə Sualınız</b></h4>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                            <br>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="11"
+                                      placeholder="Message"></textarea>
+                        </div>
+                        <button type="button" class="btn question-btn">Mesaj Göndər</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <h5 style="padding-left: 36px"><b>Əlaqə</b></h5>
+                <div class="footer-contact quiz-info ">
+
+                    <ul class="pl-5">
+
+                        <li class="pb-4 pt-4">
+                            <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
+                            <span>@Model.contactTech.HomePhone</span>
+                            <p>@Model.contactTech.Phone</p>
+                        </li>
+                        <li class="pb-4 pt-4">
+                            <span class="contact-title"><i class="fas fa-envelope"></i> Email:</span><br>
+                            <span><a class="emailcolor" href="#">@Model.contactTech.Email</a></span>
+                        </li>
+                        <li class="pb-3 pt-4">
+                            <span class="contact-title"><i class="fas fa-clock"></i> İş vaxtı:</span><br>
+                            <span>@Model.contactTech.WorkDate</span>
+                        </li>
+
+                        <li class="pb-4 pt-4">
+                            <span class="contact-title"><i class="fas fa-map-marker-alt"></i> Ünvan:</span><br>
+                            <span>@Model.contactTech.Adress</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End of Contact-->
+@section CartJs{
+
+    <script src="~/js/cart.js"></script>
+}

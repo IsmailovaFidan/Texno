@@ -1,0 +1,143 @@
+﻿@using TexnoGallery.ViewModel.Default
+@model DefaultViewModel
+
+@section mainCss{
+    <link rel="stylesheet" href="~/vendors/slick/css/slick-theme.css">
+    <link rel="stylesheet" href="~/vendors/slick/css/slick.css">
+    <link href="~/css/easyzoom.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/.css">
+    <link href="~/css/magnific-popup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/Product.css">
+}
+<div class="container ">
+    <div class="row">
+        <div class="col-md-5 mt-5">
+            <div style="background:white;border:1px solid #ccc;" class=" d-flex p-2 align-items-center justify-content-center easyzoom au-btn--small easyzoom--overlay easyzoom--with-thumbnails bigImg ">
+                <input class="hidePId" type="hidden" value="@Model.ProductDetail.Id" />
+
+                <a href="@Model.ProductDetail.Image">
+                    <img class="pro_image" src="@Model.ProductDetail.Image" alt="Texno" style="width: 100%;" />
+                </a>
+            </div>
+
+            <div class="slider sld"  style="">
+                <div class="bx-pager ">
+                    <div class="bxSlide-img" style="padding:15px;border:1px solid #ccc;height:90px;background:#fff">
+                        <a href="@Model.ProductDetail.Image">
+                            <img style="object-fit:cover;" alt="@Model.ProductDetail.Name" class="img-fluid" src="@Model.ProductDetail.Image" />
+                         </a>
+                     </div>
+                    @foreach (var item in Model.ProImage)
+                    {
+                <div class="bxSlide-img" style="padding:10px;border:1px solid #ccc;height:120px;background:#fff">
+                    <a href="@item.Image">
+                        <img style="object-fit:cover;width:80%;margin:auto" alt="@item.Product.Name" class="img-fluid" src="@item.Image" />
+                    </a>
+                </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 div-text mt-5">
+
+            <h2 class="pro_name">
+                @Model.ProductDetail.Name
+            </h2>
+
+            <p class="price pro_price">@Model.ProductDetail.Price AZN</p>
+
+            @*<label>Miqdar:</label>*@
+            @*<input class="mb-5 cart-quantity"  type="number" value="1" style="width:152px">*@<br />
+            <button type="button" class="cart mb-3" data-action="Add_To_Cart">Səbətə Əlavə Et</button><br />
+            <button type="button" class="cart1">İndi Al</button>
+        </div>
+
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="TableProduct">
+                <h3><b>Texniki göstəricilər</b></h3>
+                <table class="table bg-white">
+
+                    <tbody>
+
+                            @foreach (var item in Model.ProductDetail.ProductOptions)
+                            {
+                                <tr>
+                                    <th style="width:18%" scope="row">@item.Option.Name :</th>
+                                    <td>@item.Option.Description</td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@section CartJs{
+
+    <script src="~/js/cart.js"></script>
+}
+@section mainJS{
+
+    <script src="~/vendors/slick/js/slick.js"></script>
+    <script src="~/js/easyzoom.min.js"></script>
+    <script src="~/js/prod.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script>
+        
+        $('.easyzoom').easyZoom({
+            position: 'center',
+            //background: '#222',
+
+        });
+        
+        // Setup toggles example
+  $(document).ready(function() {
+	$(".sld").magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>by Texno Gallery</small>';
+			}
+		}
+	});
+});
+        $('.toggle').on('click', function () {
+            var $this = $(this);
+
+            if ($this.data("active") === true) {
+                $this.text("Switch on").data("active", false);
+                api2.teardown();
+            } else {
+                $this.text("Switch off").data("active", true);
+                api2._init();
+            }
+        });
+        $(".bxSlide-img").on("click", function () {
+            var imgSlide = $(this).find("img").attr('src');
+            $(".bigImg").find("img").attr("src", imgSlide)
+            $(".bigImg").find("a").attr("href", imgSlide)
+        })
+    </script>
+}

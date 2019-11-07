@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "SearchPro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using TexnoGallery.ViewModel.Default
+@model DefaultViewModel
+
+@section mainCss{
+    <link rel="stylesheet" href="~/css/shop.css">
+
+}
+
+<div class="container">
+    <div class="row mt-4 mb-4">
+        @foreach (var item in Model.productList)
+        {
+            <div class="col-md-3 mb-2">
+                <a class="aPro" href="@Url.Action("Details","Product",new { id=item.Id})">
+                    <div class="shopImg" style="height:400px;width:250px">
+                        <div class="image-div" style="height:200px">
+                            <img class="shop-img" style="height:100%;width:100%" src="~/Uploads/@item.Image" alt="">
+                        </div>
+                        <div class="img-text">
+                            <span style="color:black">@item.Name</span>
+                            <p style="color:black">@item.Price AZN</p>
+                            <button type="button" class="btn btn-warning">Sebete elave et</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@section CartJs{
+
+    <script src="~/js/cart.js"></script>
+}

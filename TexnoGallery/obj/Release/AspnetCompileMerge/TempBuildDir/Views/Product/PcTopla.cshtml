@@ -1,0 +1,86 @@
+﻿@using TexnoGallery.ViewModel.Default
+@model DefaultViewModel
+
+@{
+    ViewBag.Title = "PcTopla";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section mainCss{
+    <link rel="stylesheet" href="~/css/pc.css">
+
+}
+<div class="clearfix"></div>
+
+<div class="PcTopla">
+    <div class="PcHeader">
+        <span>PC topla +</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7">
+                <section id="nested">
+
+                    @foreach (var pcsubItem in Model.SubCategoryName)
+                    {
+                        if (pcsubItem.isPcCollect == 1 && pcsubItem.Products.Count()!=0)
+                        {
+                            <div data-foldable-role="group" class="group">
+                                <button class="btnParent" data-foldable-role="trigger">@pcsubItem.Name <i class="fas fa-chevron-down"></i></button>
+                                <div data-foldable-role="target" id="target">
+                                    <!-- Nested group -->
+                                   @foreach (var pcItem in pcsubItem.Products)
+                                   {
+                                         <div class="productInfo d-flex justify-content-between" data-foldable-role="group">
+                                       
+                                                    <div class="col-md-1">
+                                                        <div class="imgProduct">
+                                                            <img class="img-fluid pro_image" src="@pcItem.Image" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="ProText">
+                                                            <a class="pro_name" href="@Url.Action("details","Product",new { id=pcItem.Id})">@pcItem.Name</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="ProMarka">
+                                                            <b>Amd</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="ProPrice">
+                                                            <span class="pro_price">@pcItem.Price Azn</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button data-action="AddToCart" pId="@pcItem.Id" class="btnPro">Əlavə Et</button>
+                                                        <a href="@Url.Action("Details","Product",new { id=pcItem.Id})" class="showPro">Məhsula bax +</a>
+                                                    </div>
+                                                </div>
+                                   }
+                                </div>
+                            </div>
+                             }
+                                  
+
+                        }
+                </section>
+            </div>
+            <div class="col-md-5">
+                <div class="PcText">
+                    <div class="Ptext">
+                        <p>Hele mehsul elave edilmiyib</p>
+
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!--/#content-->
+@section mainJS{
+
+    <script src="~/js/pctopla.js"></script>
+}

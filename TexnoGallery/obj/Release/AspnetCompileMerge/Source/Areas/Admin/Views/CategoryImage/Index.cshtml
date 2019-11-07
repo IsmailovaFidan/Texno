@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TexnoGallery.Models.ImageCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section adminCss{
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/photoswipe.css">
+}
+<h2 class="text-center mt-3">Image Category</h2>
+
+
+
+
+<div class="my-gallery card-body row gallery-with-description">
+    @foreach (var item in Model)
+    {
+        <figure  class="col-xl-3 col-sm-6">
+            <img src="@item.Image" itemprop="thumbnail" alt="Image description" style="height:230px; border:1px solid #ddd">
+            <div class="caption" style="border: 1px solid #e4e6ee;padding: 5px 10px 10px 10px;border-top: none !important;">
+                <h4>@item.Name</h4>
+                <p>@item.Description</p>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-sm" name="Edit" href=@Url.Action("Edit","CategoryImage",new { id=item.Id})>
+                        <i class="far fa-edit"></i> Edit
+                    </a>
+                </div>
+            </div>
+        </figure>
+
+    }
+</div>
+
