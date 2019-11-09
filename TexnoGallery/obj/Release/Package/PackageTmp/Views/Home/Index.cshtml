@@ -54,7 +54,7 @@
             @foreach (var item in Model.productList)
             {
                 <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(catItem.Name)})" style="color:black;">
+                    <a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})" style="color:black;">
                         <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
                             <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
                         </div>

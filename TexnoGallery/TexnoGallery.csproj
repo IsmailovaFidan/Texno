@@ -1456,6 +1456,7 @@
     <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="Properties\PublishProfiles\TexnoGallery20191020020308 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TexnoGallery20191020122534 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TexnoGallery20191109110114 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

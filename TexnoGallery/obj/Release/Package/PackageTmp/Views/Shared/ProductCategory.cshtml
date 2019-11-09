@@ -57,9 +57,9 @@
                 @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form" }))
                 {
                     <div class="input-group mt-2">
-                        <input type="search" class="form-control search-field" id="search" placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
+                        <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
                         <div class="input-group-append">
-                            <a href="@Url.Action("SearchPro","Index")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                            <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
                         </div>
                     </div>
                 }

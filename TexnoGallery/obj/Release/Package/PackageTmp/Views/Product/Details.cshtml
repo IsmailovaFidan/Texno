@@ -16,20 +16,20 @@
                 <input class="hidePId" type="hidden" value="@Model.ProductDetail.Id" />
 
                 <a href="@Model.ProductDetail.Image">
-                    <img class="pro_image" src="@Model.ProductDetail.Image" alt="Texno" style="width: 100%;" />
+                    <img class="pro_image" src="@Model.ProductDetail.Image" alt="Texno" style="width: 95%;object-fit:contain" />
                 </a>
             </div>
 
             <div class="slider sld"  style="">
                 <div class="bx-pager ">
-                    <div class="bxSlide-img" style="padding:15px;border:1px solid #ccc;height:90px;background:#fff">
+                    <div class="bxSlide-img d-flex align-items-center"  style="padding:10px;border:1px solid #ccc;height:120px;background:#fff">
                         <a href="@Model.ProductDetail.Image">
                             <img style="object-fit:cover;" alt="@Model.ProductDetail.Name" class="img-fluid" src="@Model.ProductDetail.Image" />
                          </a>
                      </div>
                     @foreach (var item in Model.ProImage)
                     {
-                <div class="bxSlide-img" style="padding:10px;border:1px solid #ccc;height:120px;background:#fff">
+                <div class="bxSlide-img d-flex align-items-center" style="padding:10px;border:1px solid #ccc;height:120px;background:#fff">
                     <a href="@item.Image">
                         <img style="object-fit:cover;width:80%;margin:auto" alt="@item.Product.Name" class="img-fluid" src="@item.Image" />
                     </a>
