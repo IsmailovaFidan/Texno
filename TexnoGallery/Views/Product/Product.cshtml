@@ -13,10 +13,16 @@
     <input id="catSubId" type="hidden" data-subcatid="subCatId" value="@subId" />
 
     <div class="container-fluid">
+        @*<div class="col-12 mb-5 mob-filter">
+            <div class="d-flex justify-content-between">
+                <button>Sırala</button>
+                <button>Filter</button>
+            </div>
+        </div>*@
         <div class="row">
-            <div class="mob-category col-md-4 col-lg-3">
+            <div class="mob-shop-category col-md-4 col-lg-3">
 
-                <div class="ShopCategory" data-aos="fade-right">
+                <div class="ShopCategory">
 
                     @foreach (var item in Model.SubCategoryName.Where(sb=>sb.CategoryId==catId))
                     {
@@ -85,7 +91,9 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
-                
+                @*<a href="@Url.Action("Index","Home")">Ana Səhifə</a>
+                <span>/</span>
+                <a href="@Url.Action("Index","Home")">@Model.CategoryName</a>*@
                 <div id="prdcFor" class="row">
                     @foreach (var item in Model.productList)
                     {
@@ -111,7 +119,7 @@
                         </div>
                     }
                 </div>
-                
+
             </div>
         </div>
     </div>

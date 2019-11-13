@@ -190,7 +190,7 @@ function countCartTotal() {
 countProductTotal();
 function countProductTotal() {
     $(".header-cart .items").empty();
-    document.querySelector(".header-cart .items").innerText = cart.length;
+    document.querySelector(".header-cart .items").innerText = "("+cart.length+")";
     
 }
 
