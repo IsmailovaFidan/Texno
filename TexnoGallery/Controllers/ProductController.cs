@@ -15,7 +15,9 @@ namespace TexnoGallery.Controllers
         // GET: Product
         public ActionResult Product(int? id,int? subId)
         {
-            var selectPro=new List<Product>();
+
+
+            var selectPro =new List<Product>();
             if (id == null)   return RedirectToAction("Index", "Home");
             if (subId == null) {  
                 selectPro = db.Products.Where(pr => pr.SubCategory.CategoryId == id).ToList();
@@ -29,7 +31,8 @@ namespace TexnoGallery.Controllers
             {
                 CategoryName = db.Categories.ToList(),
                 SubCategoryName = db.SubCategories.ToList(),
-                productList =selectPro,
+                aboutTech = db.AboutUs.FirstOrDefault(),
+                productList = selectPro,
                 marka=db.Markas.Where(pr=>pr.SubCategoryId==subId).ToList()                
             };
             ViewBag.proMax = db.Products.Where(sb=>sb.SubCategory.Category.Id==id).Max(pr=>pr.Price);
@@ -45,7 +48,7 @@ namespace TexnoGallery.Controllers
             {
                 CategoryName = db.Categories.ToList(),
                 SubCategoryName = db.SubCategories.ToList(),
-
+                aboutTech = db.AboutUs.FirstOrDefault(),
             };
                return View(defaultModel);  
         }
@@ -55,7 +58,7 @@ namespace TexnoGallery.Controllers
             {
                 CategoryName = db.Categories.ToList(),
                 SubCategoryName = db.SubCategories.ToList(),
-
+                aboutTech = db.AboutUs.FirstOrDefault(),
             };
             return View(defaultModel);
         }
@@ -77,6 +80,8 @@ namespace TexnoGallery.Controllers
                 ProImage = db.ProductImages.Where(pri=>pri.ProductId==id).ToList(),
                 ProductDetail = db.Products.FirstOrDefault(pr => pr.Id == id),
                 //OptionPro=db.ProductOptions.Where(a=>a.Id==id).ToList(),
+                aboutTech = db.AboutUs.FirstOrDefault(),
+
             };
             return View(defaultModel);
         }

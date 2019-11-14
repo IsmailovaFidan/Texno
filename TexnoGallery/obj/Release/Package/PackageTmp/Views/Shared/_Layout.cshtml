@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using TexnoGallery.Models
+@model TexnoGallery.ViewModel.Default.DefaultViewModel
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,123 +11,147 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Texno Gallery - TexnoGallery.az</title>
     <link rel="icon" href="~/Uploads/albabaİcon.png" type="image/x-icon">
-    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/owl.carousel.css">
-    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/owl.theme.default.min.css">
     <script src="https://kit.fontawesome.com/a5a64ef4c6.js"></script>
     @RenderSection("mainCss", required: false)
 
-    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/style.css">
 </head>
 
 <body>
-
+    <div class="loader-bg">
+        <div class="loader"></div>
+    </div>
     <!--# Top Header Start-->
-    <div class="top-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                    <div class="top-right">
-                        <ul>
-                            <li>
-                                <a href="https://www.facebook.com/texnogallery28/" target="_blank">
-                                    <img style="width: 25px" src="~/images/facenew.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/texnogallery/" target="_blank">
-                                    <img style="width: 28px" src="~/images/580b57fcd9996e24bc43c521.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank">
-                                    <img style="width: 30px" src="~/images/580b57fcd9996e24bc43c545.png" alt="">
-                                </a>
-                            </li>
-                            <li class="pr-0"><a href="#">En |</a></li>
-                            <li class="pr-0"><a href="#">Az |</a></li>
-                            <li><a href="#">Ru</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 ">
-                    <div class="top-left text-right ">
-                        @if (Session["user"] == null)
-                        {
+    @*<div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <div class="top-right">
                             <ul>
-                                <li><a href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i>Login</a></li>
-                                <li><a href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
+                                <li>
+                                    <a href="https://www.facebook.com/texnogallery28/" target="_blank">
+                                        <img style="width: 25px" src="~/images/facenew.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/texnogallery/" target="_blank">
+                                        <img style="width: 28px" src="~/images/580b57fcd9996e24bc43c521.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank">
+                                        <img style="width: 30px" src="~/images/580b57fcd9996e24bc43c545.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="pr-0"><a href="#">En |</a></li>
+                                <li class="pr-0"><a href="#">Az |</a></li>
+                                <li><a href="#">Ru</a></li>
                             </ul>
-                        }
-                        else
-                        {
-                            var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    @appUser.FirstName
-                                </button>
-                                <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
-                                    <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 ">
+                        <div class="top-left text-right ">
+                            @if (Session["user"] == null)
+                            {
+                                <ul>
+                                    <li><a href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i>Login</a></li>
+                                    <li><a href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
+                                </ul>
+                            }
+                            else
+                            {
+                                var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @appUser.FirstName
+                                    </button>
+                                    <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                                        <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                    </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>*@
     <!--# Top Header End-->
     <!--#Header Start-->
     <div class="site-header-main">
         <nav class="main-nav">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-6 col-lg-4 col-xl-4">
-                        <a href="@Url.Action("Index","Home")"><img src="~/images/albaba.png" style=" width:170px " alt="logo"></a>
+                    <div class="col-sm-6 col-md-6 col-6 col-lg-2 col-xl-3 pt-3">
+                        <a href="@Url.Action("Index","Home")"><img class="logo-tex" src="~/images/albaba.png" style=" width:200px " alt="logo"></a>
                     </div><!-- .site-branding -->
-                    <div class="col-lg-6 menu col-xl-6">
-                        <nav class="navbar navbar-expand-lg pt-2">
+                    <div class="col-lg-10 menu col-xl-9 col-md-3">
+                        <nav class="navbar navbar-expand-lg pt-2 float-right">
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav  main-menu">
                                     <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Index","Home")">
-                                        Ana Səhifə  <div class="active"></div>
+                                        Ana Səhifə
                                         <span class="sr-only">(current)</span>
                                     </a>
-                                    @*<a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Product", "Product")">
-                                            Məhsullar <span class="sr-only">(current)</span>
-                                        </a>*@
+
                                     <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("About","Home")">
                                         Haqqımızda <span class="sr-only">(current)</span>
                                     </a>
-                                    <a class="nav-item nav-link text-white menu-a" href="@Url.Action("Contact","Home")">
+                                    <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Contact","Home")">
                                         Əlaqə <span class="sr-only">(current)</span>
                                     </a>
+                                    <a class="nav-item nav-link text-white menu-a" href="@Url.Action("PcTopla","Product")">
+                                        Pc Topla + <span class="sr-only">(current)</span>
+                                    </a>
+
+                                    <div class="header-cart mr-4" id="cart">
+
+                                        <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
+                                        <div class="items"> <span></span> </div>
+                                    </div>
+                                    <ul class="d-flex mt-2 mr-4 text-white">
+                                        <li class="pr-0"><a class="text-white" href="#">En |</a></li>
+                                        <li class="pr-0"><a class="text-white" href="#">Az |</a></li>
+                                        <li><a class="text-white" href="#">Ru</a></li>
+                                    </ul>
+                                    @if (Session["user"] == null)
+                                    {
+                                        <ul class="d-flex mt-2">
+                                            <li class="mr-2"><a class="text-white" href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
+                                            <li><a class="text-white" href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                @appUser.FirstName
+                                            </button>
+                                            <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                                                <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                            </div>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </nav>
 
+
+
                     </div>
+
                     <!-- .site-header-menu -->
-
-
-                    <div class="col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2 hidden-sm">
-                        <div class="header-cart" id="cart">
-
-                            <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
-                            <div class="items"> <span></span> </div>
-                        </div>
-                    </div>
                     <!-- HeaderIconn -->
 
-                    <div class="col-2 col-sm-2 col-md-2">
+                    <div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
                         <div id="mySidenav" class="sidenav mr-2">
                             <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeNav()">&times;</a>
                             <div class="lang">
@@ -152,10 +178,24 @@
                             <a href="@Url.Action("About","Home")">Haqqımızda</a>
                             <a href="@Url.Action("Contact","Home")">Əlaqə</a>
                         </div>
-                        <span style="font-size:30px;cursor:pointer" class="spanIcon" onclick="openNav()">&#9776;</span>
+                        <a class="wp-contact mt-4 mr-4" href="https://api.whatsapp.com/send?phone=994558850086">
+                            <img src="~/images/whatsapp.png" />
+                        </a>
+                        <span style="font-size:30px;cursor:pointer" class="spanIcon mr-3 mt-3" onclick="openNav()">&#9776;</span>
                     </div>
                     <!-- HeaderIconn End-->
                 </div><!-- .row -->
+                <div class="col-lg-12 pb-3 mt-3 text-center">
+                    @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                    {
+                        <div class="input-group my-input">
+                            <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
+                            <div class="input-group-append">
+                                <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </nav>
     </div>
@@ -213,8 +253,16 @@
                 <div class="col-md-6">
                     <h5>Haqqımızda</h5>
                     <span>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo esse, repellendus vitae aliquid quis voluptatibus hic illo tempore, officia cupiditate animi est totam molestiae? Laborum nostrum sed mollitia beatae debitis.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus, debitis maxime quis officia quod. Qui, eum! Praesentium obcaecati quibusdam ipsum, eaque provident sint officia! Iure magni voluptatem cupiditate temporibus!
+                        @if (Model.aboutTech.Description.Length > 800)
+                        {
+                            @Html.Raw(Model.aboutTech.Description.Substring(0, 800))<a href="@Url.Action("About","Home")">[Daha çox...]</a>
+
+                        }
+                        else
+                        {
+                            @Html.Raw(Model.aboutTech.Description)
+
+                        }
                     </span>
 
                 </div>
@@ -256,12 +304,16 @@
         </div>
     </footer>
     <!--End of the Footer-->
-    <script src="~/js/jquery.min.js" type="text/javascript"></script>
-    <script src="~/js/popper.min.js"></script>
-    <script src="~/js/bootstrap.js"></script>
+
+    <script src="~/FrontPublic/js/jquery-3.3.1.js"></script>
+    <script src="~/FrontPublic/js/popper.min.js"></script>
+    <script src="~/FrontPublic/js/bootstrap.js"></script>
     @RenderSection("CartJs", required: false)
     @RenderSection("mainJS", required: false)
     <script>
+        setTimeout(function () {
+            $(".loader-bg").fadeToggle();
+        }, 1500);
         function openNav() {
             document.getElementById("mySidenav").style.width = "100%";
 
