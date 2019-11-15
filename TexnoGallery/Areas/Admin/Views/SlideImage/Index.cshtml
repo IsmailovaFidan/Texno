@@ -27,9 +27,9 @@
                     <a href=@Url.Action("Edit","SlideImage",new { id=item.Id}) class="btn btn-primary btn-sm">
                          Edit
                     </a>
-                    <button cus-id="@item.Id" class="btn btn-sm deleteSlide" style="background-color:brown; color:white">
+                    <a href="@Url.Action("Delete","SlideImage",new{id=item.Id})" class="btn btn-sm deleteSlide" style="background-color:brown; color:white">
                          Delete
-                    </button>
+                    </a>
                 </div>
 
             </figure>

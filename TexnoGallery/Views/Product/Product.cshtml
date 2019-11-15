@@ -1,6 +1,8 @@
 ﻿@using TexnoGallery.ViewModel.Default
 @model DefaultViewModel
-@{ 
+@using PagedList;
+@using PagedList.Mvc;
+@{
     var subId = ViewBag.subId;
     var catId = ViewBag.catId;
 }
@@ -14,17 +16,17 @@
 
     <div class="container-fluid">
         @*<div class="col-12 mb-5 mob-filter">
-            <div class="d-flex justify-content-between">
-                <button>Sırala</button>
-                <button>Filter</button>
-            </div>
-        </div>*@
+                <div class="d-flex justify-content-between">
+                    <button>Sırala</button>
+                    <button>Filter</button>
+                </div>
+            </div>*@
         <div class="row">
             <div class="mob-shop-category col-md-4 col-lg-3">
 
                 <div class="ShopCategory">
 
-                    @foreach (var item in Model.SubCategoryName.Where(sb=>sb.CategoryId==catId))
+                    @foreach (var item in Model.SubCategoryName.Where(sb => sb.CategoryId == catId))
                     {
                         <div class="col-md-12">
                             <div class="row">
@@ -36,7 +38,7 @@
                                     </a>
                                 </div>
                             </div>
-                           
+
                         </div>
 
                     }
@@ -55,7 +57,7 @@
                             <div class="col-md-5">
                                 <div class="from">
                                     <input name="minProPrice" class="num" type="number" id="price_from" min="@ViewBag.proMin" max="@ViewBag.proMax"
-                                           value="@ViewBag.proMin"/>
+                                           value="@ViewBag.proMin" />
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -86,14 +88,14 @@
                         </div>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <button type="submit" class="btnRangePrice btn btn-warning mb-3" >Seçimi göstər</button>
+                        <button type="submit" class="btnRangePrice btn btn-warning mb-3">Seçimi göstər</button>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-8 col-lg-9">
                 @*<a href="@Url.Action("Index","Home")">Ana Səhifə</a>
-                <span>/</span>
-                <a href="@Url.Action("Index","Home")">@Model.CategoryName</a>*@
+                    <span>/</span>
+                    <a href="@Url.Action("Index","Home")">@Model.CategoryName</a>*@
                 <div id="prdcFor" class="row">
                     @foreach (var item in Model.productList)
                     {
@@ -123,6 +125,16 @@
             </div>
         </div>
     </div>
+    @*<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pagedList pagination">
+                    
+                    @Html.PagedListPager(Model, Page => Url.Action("Product", "Product", new { Page }), PagedListRenderOptions.Classic)
+                </div>
+            </div>
+        </div>
+    </div>*@
 </section>
 
 
@@ -134,34 +146,34 @@
 
     <script src="~/FrontPublic/js/shop.js"></script>
     <script type="text/javascript">
-             productFilter = {  
-             catId    : $('#catId').val(),
-             subcatId : $('#catSubId').val(),
-             
-                markaId: null,
+        productFilter = {
+            catId: $('#catId').val(),
+            subcatId: $('#catSubId').val(),
 
-            }
-        $(".filter-button").click(function() {
+            markaId: null,
+
+        }
+        $(".filter-button").click(function () {
             let filterPrice = $(this).val()
             let maxPrice = $("input[name='maxProPrice']").val();
             let minPrice = $("input[name='minProPrice']").val();
             updateAllData(filterPrice, productFilter.markaId, minPrice, maxPrice, productFilter.subcatId, productFilter.catId)
         })
         $(".btnRangePrice").click(function () {
-            
+
             let maxPrice = $("input[name='maxProPrice']").val();
             let minPrice = $("input[name='minProPrice']").val();
-            updateAllData(productFilter.markaId, minPrice, maxPrice, productFilter.subcatId,productFilter.catId)
+            updateAllData(productFilter.markaId, minPrice, maxPrice, productFilter.subcatId, productFilter.catId)
 
         })
         $("#markaId").click(() => {
-            $('input[name="marka"]').change(function () {   
-            if ($(this).prop('checked')) {
-              productFilter.markaId = $(this).val()
-            }
+            $('input[name="marka"]').change(function () {
+                if ($(this).prop('checked')) {
+                    productFilter.markaId = $(this).val()
+                }
+            })
         })
-        })
-        
+
         function updateAllData(markaId, minPrice, maxPrice, subcatId, catId) {
 
             $.ajax({
@@ -175,36 +187,36 @@
                     'maxPrice': maxPrice,
                     //'price':filtprice
 
-                    },
-                    success: function (res) {
-                        $("#prdcFor").empty();
-                        res.forEach(resf => {
-                            document.querySelector("#prdcFor").insertAdjacentHTML('beforeend',
-                                `
-                        <div class="col-lg-3 col-md-4 col-sm-12 col-12">
-                            <div
-                                class="shopImg mb-3" style="height:400px;">
-                                <div class="ImgDiv" style="height:200px">
-                                    <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
-                                </div>
-                                <div class="img-text mt-3">
-                                    <span class="pro_name">${resf.Name}</span>
+                },
+                success: function (res) {
+                    $("#prdcFor").empty();
+                    res.forEach(resf => {
+                        document.querySelector("#prdcFor").insertAdjacentHTML('beforeend',
+                            `
+                            <div class="col-lg-3 col-md-4 col-sm-12 col-12">
+                                <div
+                                    class="shopImg mb-3" style="height:400px;">
+                                    <div class="ImgDiv" style="height:200px">
+                                        <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
+                                    </div>
+                                    <div class="img-text mt-3">
+                                        <span class="pro_name">${resf.Name}</span>
 
-                                </div>
-                                <p class="pro_price">${resf.Price} AZN</p>
-                                <input class="hidePId" type="hidden" value="${resf.Id}" />
+                                    </div>
+                                    <p class="pro_price">${resf.Price} AZN</p>
+                                    <input class="hidePId" type="hidden" value="${resf.Id}" />
 
-                                <div class="">
-                                    <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
-                                </div>
-                                </div>
-                                </div>
+                                    <div class="">
+                                        <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
+                                    </div>
+                                    </div>
+                                    </div>
 
-                                `)
-                        })
-                    }
+                                    `)
+                    })
+                }
 
-                })
+            })
         }
     </script>
 }

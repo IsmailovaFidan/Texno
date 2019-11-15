@@ -20,6 +20,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
         // GET: Admin/CategoryImage
         public ActionResult Index()
         {
+           
             return View(db.ImageCategories.ToList());
         }
 

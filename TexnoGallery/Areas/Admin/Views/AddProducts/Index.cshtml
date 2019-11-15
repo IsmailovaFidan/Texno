@@ -17,9 +17,9 @@
 <select class="browser-default custom-select mb-5" style="width:250px">
 
     <option selected enabled>Select Category</option>
-    @foreach (var item in Model)
+    @foreach (var item in ViewBag.CategName)
     {
-        <option value="@item.SubCategoryId">@item.SubCategory.Name</option>
+        <option value="@item.Id">@item.Name</option>
     }
 
 </select>

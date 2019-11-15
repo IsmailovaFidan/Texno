@@ -30,7 +30,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
             //var product = db.Products.Include(p => p.SubCategory);
 
             var productList = db.Products.Include(p => p.SubCategory).OrderByDescending(pr => pr.Id).ToPagedList(Page, 4);
-
+            ViewBag.CategName = db.Categories.ToList();
             return View(productList);
         }
 
@@ -94,9 +94,15 @@ namespace TexnoGallery.Areas.Admin.Controllers
         // GET: Admin/AddProducts/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryId = db.Categories.ToList();
-            ViewBag.SubCategoryId = new SelectList(db.SubCategories, "Id", "Name");
+            List<Category> CategoryId = db.Categories.ToList();
+            ViewBag.CategoryId = new SelectList(CategoryId, "Id", "Name");
             return View();
+        }
+        public JsonResult GetSubCategoryList(int Id)
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            List<SubCategory> SubCatList = db.SubCategories.Where(s => s.CategoryId == Id).ToList();
+            return Json(SubCatList, JsonRequestBehavior.AllowGet);
         }
 
         private int CheckMarkaName(string markaname)

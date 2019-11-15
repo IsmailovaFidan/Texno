@@ -20,7 +20,7 @@ namespace TexnoGallery.Controllers
                 CategoryImage = db.ImageCategories.ToList(),
                 BrendPhoto = db.Brends.ToList(),
                 CategoryName = db.Categories.ToList(),
-                productList = db.Products.OrderByDescending(pr=>pr.Id).ToList(),
+                productList = db.Products.OrderByDescending(pr=>pr.Id).Take(10).ToList(),
                 aboutTech=db.AboutUs.FirstOrDefault()
 
             };
