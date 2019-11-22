@@ -31,7 +31,6 @@ namespace TexnoGallery.Models
         public virtual DbSet<Brend> Brends { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
-        public virtual DbSet<ImageCategory> ImageCategories { get; set; }
         public virtual DbSet<Marka> Markas { get; set; }
         public virtual DbSet<Option> Options { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -42,5 +41,6 @@ namespace TexnoGallery.Models
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<Slide> Slides { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

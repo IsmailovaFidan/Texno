@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TexnoGalleryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="TexnoGallery20191109110114_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="AboutUs">
     <Key>
       <PropertyRef Name="Id" />
@@ -46,7 +46,7 @@
     <Property Name="Name" Type="nvarchar" MaxLength="70" Nullable="false" />
     <Property Name="CategoryImg" Type="nvarchar" MaxLength="600" />
     <Property Name="Description" Type="nvarchar" MaxLength="250" />
-    <Property Name="Icons" Type="nvarchar" MaxLength="700" />
+    <Property Name="Status" Type="tinyint" />
   </EntityType>
   <EntityType Name="Contact">
     <Key>
@@ -58,15 +58,6 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="WorkDate" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Adress" Type="nvarchar" MaxLength="200" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ImageCategory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Image" Type="nvarchar" MaxLength="800" Nullable="false" />
   </EntityType>
   <EntityType Name="Marka">
     <Key>
@@ -108,14 +99,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Price" Type="float" Nullable="false" />
-    <Property Name="Count" Type="int" Nullable="false" />
-    <Property Name="SubCategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Count" Type="int" />
+    <Property Name="SubCategoryId" Type="int" />
     <Property Name="Discount" Type="int" />
     <Property Name="AddDate" Type="datetime" />
     <Property Name="Image" Type="nvarchar" MaxLength="800" />
     <Property Name="MarkaId" Type="int" />
+    <Property Name="Status" Type="tinyint" />
   </EntityType>
   <EntityType Name="ProductImage">
     <Key>
@@ -157,6 +149,17 @@
     <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="CategoryId" Type="int" Nullable="false" />
     <Property Name="isPcCollect" Type="tinyint" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_Marka_SubCategory">
     <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
@@ -219,7 +222,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_SubCategory">
-    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SubCategory">
@@ -278,14 +281,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TexnoGalleryModelStoreContainer">
+  <EntityContainer Name="TexnoGallery20191109110114_dbModelStoreContainer">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ApplicationUser" EntityType="Self.ApplicationUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Marka" EntityType="Self.Marka" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Options" EntityType="Self.Options" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -296,6 +298,7 @@
     <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Marka_SubCategory" Association="Self.FK_Marka_SubCategory">
       <End Role="SubCategory" EntitySet="SubCategory" />
       <End Role="Marka" EntitySet="Marka" />

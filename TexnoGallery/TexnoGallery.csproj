@@ -308,7 +308,6 @@
     <Compile Include="Areas\Admin\Controllers\Api\SubCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthenticationFilter.cs" />
     <Compile Include="Areas\Admin\Controllers\BrendsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\CategoryImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryTextController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContactSiteController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -347,9 +346,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ImageCategory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Marka.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -394,6 +390,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SubCategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1177,9 +1176,12 @@
     <Content Include="FrontPublic\css\pc.css" />
     <Content Include="FrontPublic\css\Product.css" />
     <Content Include="FrontPublic\css\shop.css" />
+    <Content Include="FrontPublic\css\slick-theme.css" />
+    <Content Include="FrontPublic\css\slick.css" />
     <Content Include="FrontPublic\css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="FrontPublic\js\slick.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\1-19990_pc-laptop-png-hp-pavilion-15-cc129tx.png" />
@@ -1388,8 +1390,6 @@
     <Content Include="Areas\Admin\Views\AboutSite\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ContactSite\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ContactSite\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoryImage\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\CategoryImage\Index.cshtml" />
     <Content Include="Areas\Admin\Views\CategoryText\Create.cshtml" />
     <Content Include="Areas\Admin\Views\CategoryText\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\CategoryText\Details.cshtml" />
@@ -1440,6 +1440,11 @@
     <Content Include="Areas\Admin\Views\Options\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Options\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Options\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategories\Index.cshtml" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -1447,11 +1452,6 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\SubCategories\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\SubCategories\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\SubCategories\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\SubCategories\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\SubCategories\Index.cshtml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
@@ -1613,6 +1613,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Uploads\159-1594018_lmp-mini-displayport-to-hdmi-adapter-usb-cable.png" />
     <Content Include="Uploads\1hC8U.jpg" />
+    <Content Include="Uploads\891c42a5-2f1a-45e5-9567-ed394c96ef5f.jpg" />
     <Content Include="Uploads\acer.png" />
     <Content Include="Uploads\albaba.png" />
     <Content Include="Uploads\albabaİcon.png" />
@@ -1621,11 +1622,15 @@
     <Content Include="Uploads\apple.png" />
     <Content Include="Uploads\asus.png" />
     <Content Include="Uploads\computer-accessories.png" />
+    <Content Include="Uploads\d5a80647-9246-474f-a56b-9f11a3d63b11.jpg" />
+    <Content Include="Uploads\dell-24-compressor.jpg" />
     <Content Include="Uploads\dell.png" />
     <Content Include="Uploads\G1.jpg" />
     <Content Include="Uploads\Gaming-Computer-PNG-Photo.png" />
     <Content Include="Uploads\hkc-hkc-at24a-64gb-nl-all-in-one-pc.png" />
     <Content Include="Uploads\hp.png" />
+    <Content Include="Uploads\ImgW %281%29.jpeg" />
+    <Content Include="Uploads\ImgW.jfif" />
     <Content Include="Uploads\intel.png" />
     <Content Include="Uploads\lenovo.png" />
     <Content Include="Uploads\monitor-1307227_1920-1024x723.jpg" />
@@ -1770,6 +1775,8 @@
     <Content Include="Uploads\ProjectImage\50dd2dba-5850-47a8-b4cc-f8209982fa76asus-prime-x570-p-amd-x570-soket-am4-ddr4-anakart.jpg" />
     <Content Include="Uploads\ProjectImage\623660e9-25be-4459-b4d7-38b74817b8b551007030_373227409893699_7348122275276652544_n.jpg" />
     <Content Include="Uploads\ProjectImage\8e676053-6ed3-46ab-877f-9432f43388d91554185097759.jpg" />
+    <Content Include="Uploads\ProjectImage\9d9e5bea-894d-4321-af0d-9f0930025838IMG_k4831.jpg" />
+    <Content Include="Uploads\ProjectImage\afc120ed-64e3-4f40-b93c-3dfa7cbdc49ftntnm.jpg" />
     <Content Include="Uploads\ProjectImage\b76bc700-5a25-4f46-8f11-14dac5aa17f8maxresdefault.jpg" />
     <Content Include="Uploads\ProjectImage\f662c895-1293-403c-b75e-02a6bf6e22afmaxresdefault.jpg" />
     <Content Include="Uploads\purepng.com-laptoplaptoptechnologyelectronicskeyboard-1121525119750ab9ua.png" />

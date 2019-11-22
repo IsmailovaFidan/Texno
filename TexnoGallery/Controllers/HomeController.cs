@@ -16,8 +16,9 @@ namespace TexnoGallery.Controllers
 
             var defaultModel = new DefaultViewModel
             {
+
                 SlideImage = db.Slides.ToList(),
-                CategoryImage = db.ImageCategories.ToList(),
+           
                 BrendPhoto = db.Brends.ToList(),
                 CategoryName = db.Categories.ToList(),
                 productList = db.Products.OrderByDescending(pr=>pr.Id).Take(10).ToList(),
@@ -42,7 +43,8 @@ namespace TexnoGallery.Controllers
             {
                 CategoryName = db.Categories.ToList(),
 
-                aboutTech = db.AboutUs.FirstOrDefault()
+                aboutTech = db.AboutUs.FirstOrDefault(),
+               
 
             };
             return View(defaultModel);

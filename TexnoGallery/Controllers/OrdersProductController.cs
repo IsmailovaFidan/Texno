@@ -57,8 +57,8 @@ namespace TexnoGallery.Controllers
                     OrderDate = DateTime.Now,
                     Quantity = quant,
                     UserId = appUser.Id,
-                    Price=prc.Price,
-                    TotalPrice=quant*prc.Price
+                    Price=(double)prc.Price,
+                    TotalPrice=quant*(double)prc.Price
                     
                 });
                 db.SaveChanges();

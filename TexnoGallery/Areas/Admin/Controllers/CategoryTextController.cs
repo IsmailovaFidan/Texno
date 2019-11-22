@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using TexnoGallery.Models;
 
@@ -61,13 +63,19 @@ namespace TexnoGallery.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Category category)
+        public ActionResult Create([Bind(Include = "Id,Name,CategoryImg")] Category category, HttpPostedFileBase Photo)
         {
             Category selectedCategory = db.Categories.FirstOrDefault(ct => ct.Name.ToLower() == category.Name.ToLower());
             if (ModelState.IsValid)
             {
-                if (selectedCategory==null)
+                if (selectedCategory==null && Photo==null)
                 {
+                    WebImage image = new WebImage(Photo.InputStream);
+                    FileInfo photoInfo = new FileInfo(Photo.FileName);
+                    string newPhoto = Guid.NewGuid().ToString() + photoInfo;
+                    image.Save("~/Uploads/" + newPhoto);
+                    category.CategoryImg = "/Uploads/" + newPhoto;
+
                     db.Categories.Add(category);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -99,11 +107,22 @@ namespace TexnoGallery.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] Category category)
+        public ActionResult Edit(int id, [Bind(Include = "Id,CategoryImg,Name")] Category category, HttpPostedFileBase Photo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
+                Category selected = db.Categories.SingleOrDefault(nt => nt.Id == id);
+
+                if (Photo != null)
+                {
+
+                    WebImage image = new WebImage(Photo.InputStream);
+                    FileInfo photoInfo = new FileInfo(Photo.FileName);
+                    string newPhoto = Guid.NewGuid().ToString() + photoInfo;
+                    image.Save("~/Uploads/" + newPhoto);
+                    category.CategoryImg = "/Uploads/" + newPhoto;
+                }
+                selected.CategoryImg = category.CategoryImg;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

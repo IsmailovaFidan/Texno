@@ -24,7 +24,7 @@ namespace TexnoGallery.Models
         public string Name { get; set; }
         public string CategoryImg { get; set; }
         public string Description { get; set; }
-        public string Icons { get; set; }
+        public Nullable<byte> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SubCategory> SubCategories { get; set; }

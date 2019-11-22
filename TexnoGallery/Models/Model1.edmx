@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TexnoGalleryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TexnoGallery20191109110114_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AboutUs">
           <Key>
             <PropertyRef Name="Id" />
@@ -51,7 +51,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="CategoryImg" Type="nvarchar" MaxLength="600" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
-          <Property Name="Icons" Type="nvarchar" MaxLength="700" />
+          <Property Name="Status" Type="tinyint" />
         </EntityType>
         <EntityType Name="Contact">
           <Key>
@@ -63,15 +63,6 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="WorkDate" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Adress" Type="nvarchar" MaxLength="200" Nullable="false" />
-        </EntityType>
-        <EntityType Name="ImageCategory">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Image" Type="nvarchar" MaxLength="800" Nullable="false" />
         </EntityType>
         <EntityType Name="Marka">
           <Key>
@@ -113,14 +104,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Price" Type="float" Nullable="false" />
-          <Property Name="Count" Type="int" Nullable="false" />
-          <Property Name="SubCategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Count" Type="int" />
+          <Property Name="SubCategoryId" Type="int" />
           <Property Name="Discount" Type="int" />
           <Property Name="AddDate" Type="datetime" />
           <Property Name="Image" Type="nvarchar" MaxLength="800" />
           <Property Name="MarkaId" Type="int" />
+          <Property Name="Status" Type="tinyint" />
         </EntityType>
         <EntityType Name="ProductImage">
           <Key>
@@ -162,6 +154,17 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="isPcCollect" Type="tinyint" />
+          <Property Name="Status" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Marka_SubCategory">
           <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
@@ -224,7 +227,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Product_SubCategory">
-          <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+          <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
           <End Role="Product" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SubCategory">
@@ -283,14 +286,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TexnoGalleryModelStoreContainer">
+        <EntityContainer Name="TexnoGallery20191109110114_dbModelStoreContainer">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ApplicationUser" EntityType="Self.ApplicationUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Marka" EntityType="Self.Marka" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Options" EntityType="Self.Options" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -301,6 +303,7 @@
           <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Marka_SubCategory" Association="Self.FK_Marka_SubCategory">
             <End Role="SubCategory" EntitySet="SubCategory" />
             <End Role="Marka" EntitySet="Marka" />
@@ -346,7 +349,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TexnoGalleryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TexnoGallery20191109110114_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="AboutU">
           <Key>
             <PropertyRef Name="Id" />
@@ -394,7 +397,7 @@
           <Property Name="Name" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CategoryImg" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Icons" Type="String" MaxLength="700" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Byte" />
           <NavigationProperty Name="SubCategories" Relationship="Self.FK_SubCategory_Category" FromRole="Category" ToRole="SubCategory" />
         </EntityType>
         <EntityType Name="Contact">
@@ -407,15 +410,6 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="WorkDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
-        <EntityType Name="ImageCategory">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Marka">
           <Key>
@@ -463,14 +457,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Double" Nullable="false" />
-          <Property Name="Count" Type="Int32" Nullable="false" />
-          <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="SubCategoryId" Type="Int32" />
           <Property Name="Discount" Type="Int32" />
           <Property Name="AddDate" Type="DateTime" Precision="3" />
           <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
           <Property Name="MarkaId" Type="Int32" />
+          <Property Name="Status" Type="Byte" />
           <NavigationProperty Name="Marka" Relationship="Self.FK_Product_Marka" FromRole="Product" ToRole="Marka" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Product" FromRole="Product" ToRole="Orders" />
           <NavigationProperty Name="PcToplas" Relationship="Self.FK_PcTopla_Product" FromRole="Product" ToRole="PcTopla" />
@@ -521,9 +516,20 @@
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="isPcCollect" Type="Byte" />
+          <Property Name="Status" Type="Byte" />
           <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
           <NavigationProperty Name="Markas" Relationship="Self.FK_Marka_SubCategory" FromRole="SubCategory" ToRole="Marka" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Orders_Users">
           <End Role="ApplicationUser" Type="Self.ApplicationUser" Multiplicity="1" />
@@ -610,7 +616,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Product_SubCategory">
-          <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+          <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
           <End Role="Product" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SubCategory">
@@ -652,7 +658,6 @@
           <EntitySet Name="Brends" EntityType="Self.Brend" />
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Contacts" EntityType="Self.Contact" />
-          <EntitySet Name="ImageCategories" EntityType="Self.ImageCategory" />
           <EntitySet Name="Markas" EntityType="Self.Marka" />
           <EntitySet Name="Options" EntityType="Self.Option" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
@@ -663,6 +668,7 @@
           <EntitySet Name="Questions" EntityType="Self.Question" />
           <EntitySet Name="Slides" EntityType="Self.Slide" />
           <EntitySet Name="SubCategories" EntityType="Self.SubCategory" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
             <End Role="ApplicationUser" EntitySet="ApplicationUsers" />
             <End Role="Orders" EntitySet="Orders" />
@@ -709,9 +715,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
+        <EntityContainerMapping StorageEntityContainer="TexnoGallery20191109110114_dbModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
           <EntitySetMapping Name="AboutUs">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.AboutU">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.AboutU">
               <MappingFragment StoreEntitySet="AboutUs">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -721,7 +727,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AdminsTBs">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.AdminsTB">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.AdminsTB">
               <MappingFragment StoreEntitySet="AdminsTB">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
@@ -730,7 +736,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ApplicationUsers">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.ApplicationUser">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.ApplicationUser">
               <MappingFragment StoreEntitySet="ApplicationUser">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -745,7 +751,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Brends">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Brend">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Brend">
               <MappingFragment StoreEntitySet="Brend">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="BrendImg" ColumnName="BrendImg" />
@@ -753,18 +759,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Category">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CategoryImg" ColumnName="CategoryImg" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Icons" ColumnName="Icons" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Contacts">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Contact">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Contact">
               <MappingFragment StoreEntitySet="Contact">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
@@ -775,18 +781,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ImageCategories">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.ImageCategory">
-              <MappingFragment StoreEntitySet="ImageCategory">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Image" ColumnName="Image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Markas">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Marka">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Marka">
               <MappingFragment StoreEntitySet="Marka">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="MarkaName" ColumnName="MarkaName" />
@@ -795,7 +791,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Options">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Option">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Option">
               <MappingFragment StoreEntitySet="Options">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -804,7 +800,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Order">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
@@ -817,7 +813,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PcToplas">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.PcTopla">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.PcTopla">
               <MappingFragment StoreEntitySet="PcTopla">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -825,7 +821,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Product">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -836,11 +832,12 @@
                 <ScalarProperty Name="AddDate" ColumnName="AddDate" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="MarkaId" ColumnName="MarkaId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductImages">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.ProductImage">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.ProductImage">
               <MappingFragment StoreEntitySet="ProductImage">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
@@ -849,7 +846,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductOptions">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.ProductOption">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.ProductOption">
               <MappingFragment StoreEntitySet="ProductOptions">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -858,7 +855,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Questions">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Question">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Question">
               <MappingFragment StoreEntitySet="Questions">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -868,7 +865,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Slides">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Slide">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.Slide">
               <MappingFragment StoreEntitySet="Slide">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="SlideImg" ColumnName="SlideImg" />
@@ -876,12 +873,24 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SubCategories">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.SubCategory">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.SubCategory">
               <MappingFragment StoreEntitySet="SubCategory">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="isPcCollect" ColumnName="isPcCollect" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="TexnoGallery20191109110114_dbModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -25,13 +25,14 @@ namespace TexnoGallery.Models
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
-        public int Count { get; set; }
-        public int SubCategoryId { get; set; }
+        public Nullable<double> Price { get; set; }
+        public Nullable<int> Count { get; set; }
+        public Nullable<int> SubCategoryId { get; set; }
         public Nullable<int> Discount { get; set; }
         public Nullable<System.DateTime> AddDate { get; set; }
         public string Image { get; set; }
         public Nullable<int> MarkaId { get; set; }
+        public Nullable<byte> Status { get; set; }
     
         public virtual Marka Marka { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -29,7 +29,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
         {
             //var product = db.Products.Include(p => p.SubCategory);
 
-            var productList = db.Products.Include(p => p.SubCategory).OrderByDescending(pr => pr.Id).ToPagedList(Page, 4);
+            var productList = db.Products.Include(p => p.SubCategory).OrderByDescending(pr => pr.Id).ToPagedList(Page, 10);
             ViewBag.CategName = db.Categories.ToList();
             return View(productList);
         }

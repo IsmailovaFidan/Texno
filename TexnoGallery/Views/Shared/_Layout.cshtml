@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/FrontPublic/css/owl.carousel.css">
     <link rel="stylesheet" href="~/FrontPublic/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/slick.css" />
+    <link rel="stylesheet" href="~/FrontPublic/css/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a5a64ef4c6.js"></script>
     @RenderSection("mainCss", required: false)
 
@@ -84,21 +89,33 @@
     <!--#Header Start-->
     <div class="site-header-main">
         <nav class="main-nav">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-6 col-lg-2 col-xl-3 pt-3">
+                    <div class="col-sm-7 col-md-8 col-6 col-lg-4 col-xl-4 p-3 d-flex">
+                        <div id="mySidenav" class="sidenav mr-2">
+                            <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeNav()">&times;</a>
+                            <ul>
+                                @foreach (var item in Model.CategoryName)
+                                {
+
+
+                                    <li>
+                                        <a href="@Url.Action("product","product",new { id=item.Id})">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+
+                        <span style="font-size:25px;cursor:pointer" class="spanIcon mr-3 mt-2 " onclick="openNav()">&#9776;</span>
                         <a href="@Url.Action("Index","Home")"><img class="logo-tex" src="~/images/albaba.png" style=" width:200px " alt="logo"></a>
                     </div><!-- .site-branding -->
-                    <div class="col-lg-10 menu col-xl-9 col-md-3">
-                        <nav class="navbar navbar-expand-lg pt-2 float-right">
+                    <div class="col-lg-5 menu col-xl-5 text-center">
+                        <nav class="navbar navbar-expand-lg pt-2">
 
 
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav  main-menu">
-                                    <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Index","Home")">
-                                        Ana Səhifə
-                                        <span class="sr-only">(current)</span>
-                                    </a>
+
 
                                     <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("About","Home")">
                                         Haqqımızda <span class="sr-only">(current)</span>
@@ -110,36 +127,32 @@
                                         Pc Topla + <span class="sr-only">(current)</span>
                                     </a>
 
-                                    <div class="header-cart mr-4" id="cart">
 
-                                        <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
-                                        <div class="items"> <span></span> </div>
-                                    </div>
-                                    <ul class="d-flex mt-2 mr-4 text-white">
-                                        <li class="pr-0"><a class="text-white" href="#">En |</a></li>
-                                        <li class="pr-0"><a class="text-white" href="#">Az |</a></li>
-                                        <li><a class="text-white" href="#">Ru</a></li>
-                                    </ul>
-                                    @if (Session["user"] == null)
-                                    {
-                                        <ul class="d-flex mt-2">
-                                            <li class="mr-2"><a class="text-white" href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
-                                            <li><a class="text-white" href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
-                                        </ul>
-                                    }
-                                    else
-                                    {
-                                        var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                @appUser.FirstName
-                                            </button>
-                                            <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
-                                                <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                    @*<ul class="d-flex mt-2 mr-4 text-white">
+                                            <li class="pr-0"><a class="text-white" href="#">En |</a></li>
+                                            <li class="pr-0"><a class="text-white" href="#">Az |</a></li>
+                                            <li><a class="text-white" href="#">Ru</a></li>
+                                        </ul>*@
+                                    @*@if (Session["user"] == null)
+                                        {
+                                            <ul class="d-flex mt-2">
+                                                <li class="mr-2"><a class="text-white" href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
+                                                <li><a class="text-white" href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
+                                            </ul>
+                                        }
+                                        else
+                                        {
+                                            var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    @appUser.FirstName
+                                                </button>
+                                                <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                                                    <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    }
+                                        }*@
                                 </div>
                             </div>
                         </nav>
@@ -148,54 +161,56 @@
 
                     </div>
 
+                    <div class="col-xl-3 col-lg-3 col-6 col-sm-5 col-md-4 d-flex align-items-center">
+                        @*<a class="wp-contact mt-4 mr-4" href="https://api.whatsapp.com/send?phone=994558850086">
+                                <img src="~/images/whatsapp.png" />
+                            </a>*@
+                        <div class="search-head">
+                            <i class="fas fa-search head-icon"></i>
+                            @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                            {
+                                <div class="input-group md-form form-sm form-2 pl-0 search-inp">
+                                    <input class="form-control search-field " type="text" placeholder="Axtarış..."  id="search" required aria-label="Search" aria-describedby="search" name="searchtext">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text  lighten-3" id="basic-text1">
+                                            <a href="@Url.Action("SearchPro", "Home")">
+                                                <i class="fas fa-search text-grey"
+                                                   aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            }
+                            </div>
+                        <div class="header-cart mr-4" id="cart">
+
+                            <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
+                            <div class="items"> <span></span> </div>
+
+                        </div>
+
+                        <div class="acc-head">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+
                     <!-- .site-header-menu -->
                     <!-- HeaderIconn -->
-
-                    <div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
-                        <div id="mySidenav" class="sidenav mr-2">
-                            <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeNav()">&times;</a>
-                            <div class="lang">
-                                <ul>
-                                    <li>
-                                        <a href="#">Az</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">En</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ru</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="log">
-                                <ul>
-                                    <li><a href="@Url.Action("Login","MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
-                                    <li><a href="@Url.Action("Register","MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
-                                </ul>
-                            </div>
-
-                            <a href="@Url.Action("Index","Home")">Ana Səhifə</a>
-                            <a href="@Url.Action("About","Home")">Haqqımızda</a>
-                            <a href="@Url.Action("Contact","Home")">Əlaqə</a>
-                        </div>
-                        <a class="wp-contact mt-4 mr-4" href="https://api.whatsapp.com/send?phone=994558850086">
-                            <img src="~/images/whatsapp.png" />
-                        </a>
-                        <span style="font-size:30px;cursor:pointer" class="spanIcon mr-3 mt-3" onclick="openNav()">&#9776;</span>
-                    </div>
+                    @*<div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
+                        </div>*@
                     <!-- HeaderIconn End-->
                 </div><!-- .row -->
-                <div class="col-lg-12 pb-3 mt-3 text-center">
-                    @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
-                    {
-                        <div class="input-group my-input">
-                            <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
-                            <div class="input-group-append">
-                                <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                @*<div class="col-lg-12 pb-3 mt-3 text-center">
+                        @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                        {
+                            <div class="input-group my-input">
+                                <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
+                                <div class="input-group-append">
+                                    <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
-                        </div>
-                    }
-                </div>
+                        }
+                    </div>*@
             </div>
         </nav>
     </div>
@@ -308,6 +323,9 @@
     <script src="~/FrontPublic/js/jquery-3.3.1.js"></script>
     <script src="~/FrontPublic/js/popper.min.js"></script>
     <script src="~/FrontPublic/js/bootstrap.js"></script>
+    <script src="~/FrontPublic/js/slick.min.js"></script>
+    <script src="~/FrontPublic/js/main.js"></script>
+    
     @RenderSection("CartJs", required: false)
     @RenderSection("mainJS", required: false)
     <script>
@@ -315,7 +333,8 @@
             $(".loader-bg").fadeToggle();
         }, 1500);
         function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("mySidenav").style.width = "70%";
+            document.getElementsByTagName("body").style.background = "rgba(0,0,0,0.4)";
 
         }
 

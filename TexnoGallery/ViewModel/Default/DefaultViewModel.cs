@@ -10,7 +10,7 @@ namespace TexnoGallery.ViewModel.Default
     public class DefaultViewModel
     {
         public List<Slide> SlideImage;
-        public List<ImageCategory> CategoryImage { get; set; }
+
         public AboutU aboutTech { get; set; }
         public Contact contactTech { get; set; }
         public List<Brend> BrendPhoto { get; set; }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TexnoGalleryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="TexnoGallery20191109110114_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="AboutU">
     <Key>
       <PropertyRef Name="Id" />
@@ -47,7 +47,7 @@
     <Property Name="Name" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CategoryImg" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Icons" Type="String" MaxLength="700" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" />
     <NavigationProperty Name="SubCategories" Relationship="Self.FK_SubCategory_Category" FromRole="Category" ToRole="SubCategory" />
   </EntityType>
   <EntityType Name="Contact">
@@ -60,15 +60,6 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="WorkDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ImageCategory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Marka">
     <Key>
@@ -116,14 +107,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Price" Type="Double" Nullable="false" />
-    <Property Name="Count" Type="Int32" Nullable="false" />
-    <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="SubCategoryId" Type="Int32" />
     <Property Name="Discount" Type="Int32" />
     <Property Name="AddDate" Type="DateTime" Precision="3" />
     <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
     <Property Name="MarkaId" Type="Int32" />
+    <Property Name="Status" Type="Byte" />
     <NavigationProperty Name="Marka" Relationship="Self.FK_Product_Marka" FromRole="Product" ToRole="Marka" />
     <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Product" FromRole="Product" ToRole="Orders" />
     <NavigationProperty Name="PcToplas" Relationship="Self.FK_PcTopla_Product" FromRole="Product" ToRole="PcTopla" />
@@ -174,9 +166,20 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CategoryId" Type="Int32" Nullable="false" />
     <Property Name="isPcCollect" Type="Byte" />
+    <Property Name="Status" Type="Byte" />
     <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
     <NavigationProperty Name="Markas" Relationship="Self.FK_Marka_SubCategory" FromRole="SubCategory" ToRole="Marka" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Orders_Users">
     <End Role="ApplicationUser" Type="Self.ApplicationUser" Multiplicity="1" />
@@ -263,7 +266,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Product_SubCategory">
-    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="1" />
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SubCategory">
@@ -305,7 +308,6 @@
     <EntitySet Name="Brends" EntityType="Self.Brend" />
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Contacts" EntityType="Self.Contact" />
-    <EntitySet Name="ImageCategories" EntityType="Self.ImageCategory" />
     <EntitySet Name="Markas" EntityType="Self.Marka" />
     <EntitySet Name="Options" EntityType="Self.Option" />
     <EntitySet Name="Orders" EntityType="Self.Order" />
@@ -316,6 +318,7 @@
     <EntitySet Name="Questions" EntityType="Self.Question" />
     <EntitySet Name="Slides" EntityType="Self.Slide" />
     <EntitySet Name="SubCategories" EntityType="Self.SubCategory" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
       <End Role="ApplicationUser" EntitySet="ApplicationUsers" />
       <End Role="Orders" EntitySet="Orders" />
