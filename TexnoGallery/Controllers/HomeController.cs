@@ -21,8 +21,9 @@ namespace TexnoGallery.Controllers
            
                 BrendPhoto = db.Brends.ToList(),
                 CategoryName = db.Categories.ToList(),
-                productList = db.Products.OrderByDescending(pr=>pr.Id).Take(10).ToList(),
-                aboutTech=db.AboutUs.FirstOrDefault()
+                productList = db.Products.Where(pr => pr.Status == 1).OrderByDescending(pr=>pr.Id).Take(10).ToList(),
+                proPrice=db.Products.Where(pr=>pr.Status==1).OrderBy(pr=>pr.Price).Take(10).ToList(),
+                aboutTech =db.AboutUs.FirstOrDefault()
 
             };
             return View(defaultModel);
@@ -34,6 +35,7 @@ namespace TexnoGallery.Controllers
                 CategoryName = db.Categories.ToList(),
                 aboutTech = db.AboutUs.FirstOrDefault(),
                 productList = db.Products.Where(pr=>pr.SubCategory.Name.Contains(searchText) || pr.SubCategory.Category.Name.Contains(searchText)).Take(10).ToList(),
+                
             };
             return View(defaultModel);
         }

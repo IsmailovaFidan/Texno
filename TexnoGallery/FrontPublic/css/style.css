@@ -17,11 +17,53 @@ a {
 button:focus,input:focus{
     outline:none;
 }
-
-
-    a:hover {
-        text-decoration: none;
+.search-box{
+    position:relative;
+}
+    .search-box .search-input{
+        width:0px;
+        border:0;
+        height:60px;
+        padding-left:20px;
+        border-radius:50px;
+        outline:none;
+        transition:all .3s linear;
+        background:#000;
+        
     }
+.searchbtn{
+    position:absolute;
+    top:0;
+    right:-1px;
+    transition:all .3s linear;
+    height:60px;
+    background-color:#000;
+    width:57px;
+    border-radius:50%;
+    cursor:pointer;
+}
+    .searchbtn .fas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: all .3s linear;
+    }
+    .bg-yellow{
+        background:#ffc107 !important;
+    }
+.active-width{
+    width:275px !important;
+    background:#fff !important;
+}
+.dont-show{
+    display:none !important;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
 
 ul {
     list-style: none;
@@ -551,7 +593,7 @@ Slider
 .slider__item {
     flex: 0 0 100%;
     width: 100%;
-    height: 500px;
+    height: 450px;
 }
 
 
@@ -947,7 +989,7 @@ End of the Services
 Start Footer
 =============================
 */
-footer {
+/*footer {
     background-color: #000;
 }
 
@@ -1015,7 +1057,7 @@ footer {
 
     footer .footer-line {
         background-color: #f3f0f0;
-    }
+    }*/
 
 /*
 =============================
@@ -1147,7 +1189,7 @@ End of the Footer
     }
 
     .slider__item {
-        height: 500px !important;
+        height: 400px !important;
     }
 }
 

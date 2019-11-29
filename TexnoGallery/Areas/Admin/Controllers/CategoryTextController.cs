@@ -107,7 +107,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, [Bind(Include = "Id,CategoryImg,Name")] Category category, HttpPostedFileBase Photo)
+        public ActionResult Edit(int id,[Bind(Include = "Id,CategoryImg,Name")] Category category, HttpPostedFileBase Photo)
         {
             if (ModelState.IsValid)
             {

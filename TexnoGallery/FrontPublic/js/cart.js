@@ -3,16 +3,16 @@
 'use strict';
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const cartDOM = document.querySelector('.modal-item');
+const cartDOM = document.querySelector('.cart-lay-item');
 const addToCartButtonsDOM = document.querySelectorAll('[data-action="Add_To_Cart"]');
 if (cart.length > 0) {
-    $(".modal-item").empty();
+    $(".cart-lay-item").empty();
     cart.forEach(cartItem => {
         const product = cartItem;
         insertItemToDOM(product);
         countCartTotal();
         addToCartButtonsDOM.forEach(addToCartButtonDOM => {
-            const productDOM = addToCartButtonDOM.parentNode.parentNode;
+            const productDOM = addToCartButtonDOM.parentNode.parentNode.parentNode.parentNode;
             if (productDOM.querySelector('.pro_name').innerText.trim() === product.name.trim()) {
                 handleActionButtons(addToCartButtonDOM, product);
             }
@@ -23,7 +23,7 @@ if (cart.length > 0) {
 
 addToCartButtonsDOM.forEach(addToCartButtonDOM => {
     addToCartButtonDOM.addEventListener('click', () => {
-        const productDOM = addToCartButtonDOM.parentNode.parentNode;
+        const productDOM = addToCartButtonDOM.parentNode.parentNode.parentNode.parentNode;
         const product = {
             image: productDOM.querySelector('.pro_image').getAttribute('src'),
             name: productDOM.querySelector('.pro_name').innerText,
@@ -51,19 +51,35 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
 
 function insertItemToDOM(product) {
     cartDOM.insertAdjacentHTML('beforeend', `
-    <div class="cart_item">
-        <input type="hidden" value=${product.pId}">
-      <img class="cart_item_img" src="${product.image}" alt="${product.name}">
-      <p class="cart_item_name">${product.name}</p>
-      <h4 class="cart_item_price">${(product.totalPrice === 0 ? product.price : product.totalPrice )}</h4>
-        <div class="quantity_items">
-              <button class="btn  btn-primary btn-sm${(product.quantity === 1 ? ' btn-danger' : '')}" data-action="Decrease_Item">&minus;</button>
-              <h5 class="cart_item_quantity">${product.quantity}</h5>
-              <button class="btn  btn-primary btn-sm" data-action="Increase_Item">&plus;</button>
-        </div>
-      <button class="btn btn-danger btn-sm" data-action="Remove_Item">&times;</button>
 
-    </div>
+
+<div class="cart_item cart-lay-item">
+<input type="hidden" value=${product.pId}">
+<div class="cart_img">
+<a href="#"><img src="${product.image}" alt="${product.name}"></a>
+</div>
+<div class="cart_info">
+<a href="#">${product.name}</a>
+<span class="quantity">Qty: ${product.quantity}</span>
+<span class="price_cart">${(product.totalPrice === 0 ? product.price : product.totalPrice)}</span>
+</div>
+<div class="cart_remove">
+ <a href="#"><i class="fas fa-times"></i></a>
+</div>
+</div>
+    //<div class="cart_item">
+    //    <input type="hidden" value=${product.pId}">
+    //  <img class="cart_item_img" src="${product.image}" alt="${product.name}">
+    //  <p class="cart_item_name">${product.name}</p>
+    //  <h4 class="cart_item_price">${(product.totalPrice === 0 ? product.price : product.totalPrice )}</h4>
+    //    <div class="quantity_items">
+    //          <button class="btn  btn-primary btn-sm${(product.quantity === 1 ? ' btn-danger' : '')}" data-action="Decrease_Item">&minus;</button>
+    //          <h5 class="cart_item_quantity">${product.quantity}</h5>
+    //          <button class="btn  btn-primary btn-sm" data-action="Increase_Item">&plus;</button>
+    //    </div>
+    //  <button class="btn btn-danger btn-sm" data-action="Remove_Item">&times;</button>
+
+    //</div>
   `);
     addCartFooter();
 

@@ -79,18 +79,7 @@ $(document).ready(function () {
  
   });
 });
-$(".head-icon").click(function () {
-    $(".search-inp").css("transform", "scale(1)");
-})
 
-$("#mob-categ").click(function () {
-    $(".mob-all-categ").toggle();
-})
-$(".mob-categ-li").click(function () {
-    $(".mob-sub-categ.active-cat").removeClass("active-cat")
-    $(this).find(".mob-sub-categ").toggleClass("active-cat")
-
-});
 
 
 

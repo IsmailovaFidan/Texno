@@ -1,7 +1,102 @@
 ﻿@using TexnoGallery.ViewModel.Default
 @model DefaultViewModel
+@section mainCss{
+    <link rel="stylesheet" href="~/FrontPublic/css/style.css" />
+}
+
+<!--Offcanvas menu area start-->
+<div class="off_canvars_overlay"></div>
+<div class="Offcanvas_menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="canvas_open">
+                    <span>MENU</span>
+                    <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="Offcanvas_menu_wrapper">
+
+                    <div class="canvas_close">
+                        <a href="#"><i class="fas fa-times"></i></a>
+                    </div>
 
 
+                    <div class="top_right text-right">
+                        <ul>
+                            <li class="top_links">
+                                <a href="#"><i class="fas fa-user"></i> Mənim Profilim <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown_links">
+                                    <li><a href="checkout.html">Sifarişlər </a></li>
+                                    <li><a href="my-account.html">Mənim Profilim </a></li>
+                                    <li><a href="cart.html">Səbət</a></li>
+
+                                </ul>
+                            </li>
+                            @*<li class="language">
+                                    <a href="#"><img src="assets/img/logo/language.png" alt="">en-gb<i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="dropdown_language">
+                                        <li><a href="#"><img src="assets/img/logo/language.png" alt=""> English</a></li>
+                                        <li><a href="#"><img src="assets/img/logo/language2.png" alt=""> Germany</a></li>
+                                    </ul>
+                                </li>*@
+                            @*<li class="currency">
+                                    <a href="#">$ USD<i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="dropdown_currency">
+                                        <li><a href="#">EUR – Euro</a></li>
+                                        <li><a href="#">GBP – British Pound</a></li>
+                                        <li><a href="#">INR – India Rupee</a></li>
+                                    </ul>
+                                </li>*@
+
+
+                        </ul>
+                    </div>
+                    <div class="Offcanvas_follow">
+                        <label>Bizi izlə:</label>
+                        <ul class="follow_link">
+                            <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="search-container">
+                        <form action="#">
+                            @using (Html.BeginForm("SearchPro", "Home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                            {
+                                <div class="search_box">
+                                    <input placeholder="Axtarış ..." type="text">
+                                    <a href="@Url.Action("SearchPro", "Home")"><i class="fas fa-search mt-2"></i></a>
+                                </div>
+                            }
+                        </form>
+                    </div>
+                    <div id="menu" class="text-left ">
+                        <ul class="offcanvas_main_menu">
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("About","Home")">Haqqımızda</a>
+
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("Contact","Home")">Əlaqə</a>
+
+
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("PcTopla","Product")">Pc Topla</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Offcanvas menu area end-->
 <!--Slider-->
 @*<section id="container">
         <div id="slider-container">
@@ -20,37 +115,52 @@
             <div class='bullets-container'></div>
         </div>
     </section>*@
-<section class="main-sect ">
 
-    <div class="container-fluid">
+
+<section class="slider_section mb-50">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-xl-2 mt-3">
-                <div class="category">
-                    <p class="categ-title">Kateqoriyalar</p>
-                    <ul class="main-categ">
+            <div class="col-lg-3 col-md-12">
+                <div class="categories_menu">
+                    <div class="categories_title">
+                        <i class="fas fa-bars first-categ"></i>
+                        <h2 class="categori_toggle">Kateqoriyalar</h2>
+                        <i class="fas fa-chevron-up last-categ"></i>
+                    </div>
+                    <div class="categories_menu_toggle">
+                        <ul>
+                            @foreach (var item in Model.CategoryName)
+                            {
+                                <li class="menu_item_children menu-item-children categorie_list">
+                                    <a href="@Url.Action("product","product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.Name <i class="fas fa-chevron-right float-right mt-3"></i></a>
+                                    <ul class="categories_mega_menu">
+                                        @foreach (var subitem in item.SubCategories)
+                                        {
 
-                        @foreach (var item in Model.CategoryName)
-                        {
-                            <li class="categ-li">
-                                <a href="@Url.Action("product","product",new { id=item.Id})">@item.Name</a>
-                                <ul class="sub_categ">
-                                    <h5 class="text-center mt-2" style="color:#818181; font-weight:700">@item.Name</h5>
-                                    @foreach (var subitem in item.SubCategories)
-                                    {
-                                        <li>
-                                            <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id})">* @subitem.Name</a>
-                                        </li>
-                                    }
-                                </ul>
+
+                                            <li class="menu_item_children">
+                                                <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id,title=Html.ClearnUrl(item.Name)})">@subitem.Name</a>
+                                                @*<ul class="categorie_sub_menu">
+                                                        <li><a href="#">Bower</a></li>
+                                                        <li><a href="#">Flipbac</a></li>
+                                                        <li><a href="#">Gary Fong</a></li>
+                                                        <li><a href="#">GigaPan</a></li>
+                                                    </ul>*@
+                                            </li>
+
+                                        }
+
+                                    </ul>
+                                </li>
+                            }
+                            <li class="menu_item_children categorie_list">
+                                <a href="@Url.Action("PcTopla","Product")">Pc Topla</a>
                             </li>
-                        }
-                        <li class="categ-li">
-                            <a href="@Url.Action("pctopla","product")">Pc Topla</a>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-xl-10">
+            <div class="col-lg-9 col-md-12">
                 <div class="slider">
                     <div class="slider__wrapper">
                         @foreach (var slideItem in Model.SlideImage)
@@ -65,283 +175,292 @@
                     <a class="slider__control slider__control_left" href="#" role="button"></a>
                     <a class="slider__control slider__control_right" href="#" role="button"></a>
                 </div>
+                @*<div class="slider_area owl-carousel">
+                    @foreach (var item in Model.SlideImage)
+                    {
+
+
+                        <div class="single_slider d-flex align-items-center" data-bgimg="@item.SlideImg">*@
+
+                @*<div class="slider_content">
+                        <h2>Top Quality</h2>
+                        <h1>Aftermarket Turbocharger Specialist</h1>
+                        <a class="button" href="shop.html">shopping now</a>
+                    </div>*@
+
+                @*</div>
+                        }
+
+                    </div>*@
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--shipping area start-->
+<section class="shipping_area mb-50">
+    <div class="container">
+        <div class=" row">
+            <div class="col-12">
+                <div class="shipping_inner">
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/tag.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Sərfəli Qiymət</h2>
+                            <p>Free shipping on all US order</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/shop.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Mağazalarımız</h2>
+                            <p>Fəaliyyət göstərən 3 filial</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/warranty.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Keyfiyyətli Məhsullar</h2>
+                            <p>Tam zəmanətli satış</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/support.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Yüksək Xidmət</h2>
+                            <p>We ensure secure payment</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!--End of the Slider-->
-<!--Category-->
-@*<section id="category" class="pc-category">
-        <div class="container-fluid text-center mt-5 mb-5">
-            <div class="row">
-                @foreach (var catItem in Model.CategoryName)
-                {
+<!--shipping area end-->
+<section class="product_area mb-50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Xüsusi</strong>Təkliflər</span></h2>
+                </div>
+                <div class="product_carousel product_column5 owl-carousel">
+                    @foreach (var item in Model.proPrice)
+                    {
 
-                    <div class="col-md-4 col-sm-6 col-6 col-lg-3 mb-3">
-                        <a class="text-white " href="@Url.Action("product","Product",new { id=catItem.Id,title=Html.ClearnUrl(catItem.Name)})">
-                            <div class="all-categ" style="background-image: url(@catItem.CategoryImg)">
-                                <div class="categ-content">
-                                    <h2>@catItem.Name</h2>
-                                    @Html.Raw(@catItem.Description)
+
+                        <div class="single_product">
+                            <div class="product_name">
+                                @if (item.Name.Length > 30)
+                                {
+                                    <h3>
+                                        <a class="pro_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name.Substring(0, 25))
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
+                                        <a class="pro_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name)
+                                        </a>
+                                    </h3>
+                                }
+
+                                <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
+                            </div>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="pro_image" src="@item.Image" style="height:100%" alt=""></a>
+
+
+
+
+                            </div>
+                            <div class="product_content">
+
+                                <div class="product_footer d-flex align-items-center">
+                                    <div class="price_box">
+                                        <span class="regular_price pro_price">@item.Price ₼</span>
+                                        <input class="hidePId" type="hidden" value="@item.Id" />
+                                    </div>
+                                    <div class="add_to_cart">
+                                        <a href="cart.html" data-action="Add_To_Cart" title="add to cart"><span class="fas fa-shopping-cart"></span></a>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                }
+                        </div>
+                    }
+
+
+
+                </div>
             </div>
         </div>
-    </section>*@
-<!--End of the Category-->
-<!--Products-->
-<section id="products" class="products mt-5 mb-5">
-    <div class="container">
-        <h2>Yeni Məhsullar</h2>
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price ₼</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
-        <hr>
-    </div>
 
-    <div class="container mt-5">
-        <h2>Endirimli Məhsullar</h2>
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price ₼</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-
-        </div>
-        <hr>
-    </div>
-
-    <div class="container mt-5">
-        <h2>Ən Çox Satılan Məhsullar</h2>
-
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price ₼</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
-        <hr>
-    </div>
-
-
-
-</section>
-
-<!--Statistics-->
-@*<section id="stat" class="stat mb-5">
-        <div class="container-fluid">
-            <div class="row text-center text-white">
-                <div class="col-md-4">
-                    <div class="stat-items">
-                        <i class="fas fa-chart-line"></i>
-                        <h2 class="mt-2 mb-2">
-                            <span class="counter text-center">2500</span>
-                            <span>+</span>
-                        </h2>
-                        <p>Site Visits</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-items">
-                        <i class="far fa-smile-beam"></i>
-                        <h2 class="mt-2 mb-2">
-                            <span class="counter text-center">1720</span>
-                            <span>+</span>
-                        </h2>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-items">
-                        <i class="fas fa-chart-line"></i>
-                        <h2 class="mt-2 mb-2">
-                            <span class="counter text-center">2500</span>
-                            <span>+</span>
-                        </h2>
-                        <p>Site Visits</p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>*@
-<!--End of the Statistics-->
-
-<section class="my-5">
-    <div class="container">
-        <div class="categ-slider">
-
-
-            @foreach (var item in Model.CategoryName)
-            {
-                <div class="mx-2">
-                    <a href="#">
-                        <div class="wrap-main">
-
-                            <img src="@item.CategoryImg" />
-
-                            <div class="wrap-bg"></div>
-                            <div class="wrap-text d-flex justify-content-center align-items-center">
-                                <h2 class="text-center">@item.Name</h2>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            }
-
-            @*<div class="mx-2">
-            <a href="#">
-                <div class="wrap-main">
-                    <img src="~/Uploads/dell-24-compressor.jpg" />
-
-                    <div class="wrap-bg"></div>
-                    <div class="wrap-text d-flex justify-content-center align-items-center">
-                        <h2>MONITORLAR</h2>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="mx-2">
-            <a href="#">
-                <div class="wrap-main">
-                    <img src="~/Uploads/slide2.jpg" />
-
-                    <div class="wrap-bg"></div>
-                    <div class="wrap-text d-flex justify-content-center align-items-center">
-                        <h2>ƏLAVƏ QURĞULAR</h2>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="mx-2">
-            <a href="#">
-                <div class="wrap-main">
-                    <img src="~/Uploads/dell-24-compressor.jpg" />
-
-                    <div class="wrap-bg"></div>
-                    <div class="wrap-text d-flex justify-content-center align-items-center">
-                        <h2>MONITORLAR</h2>
-                    </div>
-                </div>
-            </a>
-        </div>*@
-
-        </div>
-
-
-
-
-    
     </div>
 </section>
 
 
-<!--Services-->
-<section id="services" class="my-5">
-    <div class="follow-us">
-        <div class="social-icons d-flex py-4 justify-content-center">
-            <h6 class="text-white">FOLLOW US:</h6>
-            <a href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-youtube"></i>
-            </a>
+<section class="product_area mb-50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Yeni</strong>Məhsullar</span></h2>
+                </div>
+                <div class="product_carousel product_column5 owl-carousel">
+                    @foreach (var item in Model.productList)
+                    {
 
 
+                        <div class="single_product">
+                            <div class="product_name">
+                                @if (item.Name.Length > 30)
+                                {
+                                    <h3>
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name.Substring(0, 25))
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name)
+                                        </a>
+                                    </h3>
+                                }
 
-        </div>
-    </div>
-    @*<div class="Services mb-5">
-            <div class="container-fluid bg-white">
-                <div class="row pt-5 pb-5">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="serv text-center">
-                            <div class="serv-icon text-center">
-                                <i class="fas fa-shipping-fast fa-3x pt-4 serv-img"></i>
+                                <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
                             </div>
-                            <div class="serv-title">
-                                <h5>PULSUZ ÇATDIRILMA</h5>
-                                <p>Şəhər daxili pulsuz çatdırılma.</p>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%" alt=""></a>
+
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="serv text-center">
-                            <div class="serv-icon text-center">
-                                <i class="fas fa-lock fa-3x pt-4 serv-img"></i>
-                            </div>
-                            <div class="serv-title">
-                                <h5>ZƏMANƏT</h5>
-                                <p>Alınan bütün mallara zəmanət.</p>
+                            <div class="product_content">
+
+                                <div class="product_footer d-flex align-items-center">
+                                    <div class="price_box">
+                                        <span class="regular_price prod_price">@item.Price ₼</span>
+                                        <input class="hidePId" type="hidden" value="@item.Id" />
+                                    </div>
+                                    <div class="add_to_cart">
+                                        <button data-action="Add_To_Cart" title="add to cart"><span class="fas fa-shopping-cart"></span></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="serv text-center">
-                            <div class="serv-icon text-center">
-                                <i class="fas fa-history fa-3x pt-4 serv-img"></i>
-                            </div>
-                            <div class="serv-title">
-                                <h5>ONLAYN DƏSTƏK 24/7</h5>
-                                <p>Hər zaman online dəstək.</p>
-                            </div>
-                        </div>
-                    </div>
+                    }
+
+
 
                 </div>
             </div>
-        </div>*@
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="small_product_area mb-50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Yeni</strong>Məhsullar</span></h2>
+                </div>
+                <div class="product_carousel small_product product_column3 owl-carousel">
+                    @foreach (var item in Model.productList)
+                    {
+
+
+                        <div class="single_product">
+                            <div class="product_content">
+                                <h3><a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.Name</a></h3>
+                                @*<div class="product_ratings">
+                                        <ul>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                        </ul>
+                                    </div>*@
+                                <div class="price_box">
+                                    <span class="regular_price prod_price">@item.Price ₼</span>
+
+                                </div>
+                            </div>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="~/images/1-19990_pc-laptop-png-hp-pavilion-15-cc129tx.png" alt=""></a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+@*<div class="Services mb-5">
+        <div class="container-fluid bg-white">
+            <div class="row pt-5 pb-5">
+                <div class="col-md-4 col-sm-4">
+                    <div class="serv text-center">
+                        <div class="serv-icon text-center">
+                            <i class="fas fa-shipping-fast fa-3x pt-4 serv-img"></i>
+                        </div>
+                        <div class="serv-title">
+                            <h5>PULSUZ ÇATDIRILMA</h5>
+                            <p>Şəhər daxili pulsuz çatdırılma.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="serv text-center">
+                        <div class="serv-icon text-center">
+                            <i class="fas fa-lock fa-3x pt-4 serv-img"></i>
+                        </div>
+                        <div class="serv-title">
+                            <h5>ZƏMANƏT</h5>
+                            <p>Alınan bütün mallara zəmanət.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="serv text-center">
+                        <div class="serv-icon text-center">
+                            <i class="fas fa-history fa-3x pt-4 serv-img"></i>
+                        </div>
+                        <div class="serv-title">
+                            <h5>ONLAYN DƏSTƏK 24/7</h5>
+                            <p>Hər zaman online dəstək.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>*@
 </section>
 <!--End of the Services-->
 <!-- map -->
@@ -396,9 +515,9 @@
 <!-- map end -->
 <!--Brands-->
 <section id="brands">
-   
+
     <div class="container slide-brands mb-3">
-        
+
         <div class="owl-carousel owl-theme">
             @foreach (var BrendPh in Model.BrendPhoto)
             {
@@ -410,6 +529,7 @@
     </div>
 </section>
 <!--End of the Brands-->
+
 @section CartJs{
 
     <script src="~/FrontPublic/js/cart.js"></script>

@@ -232,13 +232,13 @@
     margin: 0 auto;
 }
 
-.forny-form h4 {
-    color: black;
-    color: var(--forny-color-header);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    margin-bottom: var(--forny-p4);
-}
+    .forny-form h4 {
+        color: #72787e;
+        color: #72787e;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-bottom: var(--forny-p4);
+    }
 
 .forny-form .forny-logo {
     text-align: center;

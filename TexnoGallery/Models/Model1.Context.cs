@@ -41,6 +41,5 @@ namespace TexnoGallery.Models
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<Slide> Slides { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

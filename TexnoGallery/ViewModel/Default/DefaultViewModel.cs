@@ -15,9 +15,12 @@ namespace TexnoGallery.ViewModel.Default
         public Contact contactTech { get; set; }
         public List<Brend> BrendPhoto { get; set; }
         public IEnumerable<Product> productList { get; set; }
+        public IEnumerable<Product> proPrice { get; set; }
         public List<ProductImage> ProImage { get; set; }
         public Product ProductDetail { get; set; }
         public List<Category> CategoryName { get; set; }
+        public Category OneCategory { get; set; }
+        public SubCategory OneSubCategory { get; set; }
         public List<SubCategory> SubCategoryName { get; set; }
         public List<Order> OrderList { get; set; }
         //public List<Produc> OptionPro;

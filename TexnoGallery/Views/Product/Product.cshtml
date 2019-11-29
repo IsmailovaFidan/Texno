@@ -9,6 +9,226 @@
 @section mainCss{
     <link rel="stylesheet" href="~/FrontPublic/css/shop.css">
 }
+<input id="catId" type="hidden" data-catid="subId" value="@catId" />
+<input id="catSubId" type="hidden" data-subcatid="subCatId" value="@subId" />
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="@Url.Action("Index","Home")">Ana Səhifə</a></li>
+                        <li>
+                            <a href="@Url.Action("Product","Product",new { catId=Model.OneCategory.Id})">
+
+                                @Model.OneCategory.Name
+                            </a>
+                        </li>
+                        @if (subId != null)
+                        {
+                            <li>
+                                <a href="@Url.Action("Product","Product",new { subId=Model.OneSubCategory.Id})">@Model.OneSubCategory.Name</a>
+                            </li>
+                        }
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shop  area start-->
+<div class="shop_area shop_reverse">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <!--sidebar widget start-->
+                <aside class="sidebar_widget">
+                    <div class="widget_inner">
+                        <div class="widget_list widget_filter">
+                            <h2>QİYmətə görə Fİlter</h2>
+                            @*<div class="row mr-2 ml-2 mb-5">
+                                <div class="col-md-5">
+                                    <div class="from">
+                                        <input name="minProPrice" class="num" type="number" id="price_from" min="@ViewBag.proMin" max="@ViewBag.proMax"
+                                               value="@ViewBag.proMin" />
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <span>__</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="to">
+                                        <input class="num" name="maxProPrice" type="number" id="price_to" min="@ViewBag.proMin" max="@ViewBag.proMax" value="@ViewBag.proMax">
+                                    </div>
+                                </div>
+
+                            </div>*@
+                            <form action="#">
+            <div id="slider-range"></div>
+            <button type="submit">filter</button>
+            <input type="text" name="text" id="amount" />
+
+        </form>
+                            @*<div class="col d-flex justify-content-center">
+                                <button type="submit" class="filter-button btnRangePrice btn btn-warning mb-3">Seçimi göstər</button>
+                            </div>*@
+                        </div>
+                        <div class="widget_list widget_categories">
+                            <h2>Kateqorİyalar</h2>
+                            <ul>
+                                @foreach (var item in Model.SubCategoryName.Where(sb => sb.CategoryId == catId))
+                                {
+                                    <li>
+
+                                        <a id="@item.Id" href="@Url.Action("product","product",new { subId=item.Id})">@item.Name</a>
+
+                                    </li>
+                                }
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </aside>
+                <!--sidebar widget end-->
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <!--shop wrapper start-->
+                <!--shop toolbar start-->
+
+
+                <div class="shop_toolbar_wrapper">
+                    <div class="shop_toolbar_btn">
+
+                        <button data-role="grid_3" type="button" class="active btn-grid-3" data-toggle="tooltip" title="3">
+                        </button>
+
+                        <button data-role="grid_4" type="button" class=" btn-grid-4" data-toggle="tooltip" title="4"></button>
+
+                        <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                    </div>
+                    <div class=" niceselect_option">
+
+                        <form class="select_option" action="#">
+                            <select name="orderby" id="short">
+                                <option selected value="1">Sırala</option>
+                                <option  value="2">Sırala: Əvvəlcə Ucuz</option>
+                                <option value="3">Sırala: Əvvəlcə Baha</option>
+                            </select>
+                        </form>
+
+
+                    </div>
+                    @*<div class="page_amount">
+                        <p>Showing 1–9 of 21 results</p>
+                    </div>*@
+                </div>
+                <!--shop toolbar end-->
+
+                <div class="row shop_wrapper">
+                    @foreach (var item in Model.productList)
+                    {
+                        <div class="col-lg-4 col-md-4 col-12 ">
+                            <div class="single_product">
+                                <div class="product_name grid_name">
+                                    @if (item.Name.Length > 20)
+                                    {
+                                        <h3><a class="pro_name" href="@Url.Action("Details", "Product", new { id = item.Id, title = Html.ClearnUrl(item.Name) })">@Html.Raw(item.Name.Substring(0, 20))</a></h3>
+                                    }
+                                    else
+                                    {
+                                        <h3><a class="pro_name" href="@Url.Action("Details", "Product", new { id = item.Id, title = Html.ClearnUrl(item.Name) })">@item.Name</a></h3>
+
+                                    }
+                                    <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
+                                </div>
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="pro_image prod-img" src="@item.Image" alt=""></a>
+                                    @*<div class="label_product">
+                            <span class="label_sale">-47%</span>
+                        </div>*@
+
+                                </div>
+                                <div class="product_content grid_content">
+                                    <div class="content_inner">
+
+                                        <div class="product_footer d-flex align-items-center">
+                                            <div class="price_box">
+                                                <span class="current_price prod_price">@item.Price ₼</span>
+                                                <input class="hidePId" type="hidden" value="@item.Id" />
+                                                @*<span class="old_price">$3200.00</span>*@
+                                            </div>
+                                            <div class="add_to_cart">
+                                                <a href="cart.html" title="add to cart" data-action="Add_To_Cart"><span class="fas fa-shopping-cart"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_content list_content">
+                                    <div class="left_caption">
+                                        <div class="product_name">
+                                            <h3><a class="prod_name" href="@Url.Action("Details", "Product", new { id = item.Id, title = Html.ClearnUrl(item.Name) })">@item.Name</a></h3>
+                                        </div>
+
+
+                                        <div class="product_desc">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="right_caption">
+                                        @*<div class="text_available">
+                                <p>availabe: <span>99 in stock</span></p>
+                            </div>*@
+                                        <div class="price_box">
+                                            <span class="current_price prod_price">@item.Price ₼</span>
+                                            <input class="hidePId" type="hidden" value="@item.Id" />
+                                            @*<span class="old_price">$420.00</span>*@
+                                        </div>
+                                        <div class="cart_links_btn">
+                                            <a href="#" title="add to cart" data-action="Add_To_Cart">Səbətə Əlavə Et</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                    </div>
+
+                <div class="shop_toolbar t_bottom">
+                    <div class="pagination">
+                        <ul>
+                            <li class="current">1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="next"><a href="#">next</a></li>
+                            <li><a href="#">>></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--shop toolbar end-->
+                <!--shop wrapper end-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--shop  area end-->
+
+
 
 <section id="Shop" class="mt-5 mb-5">
     <input id="catId" type="hidden" data-catid="subId" value="@catId" />
@@ -88,7 +308,7 @@
                         </div>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <button type="submit" class="btnRangePrice btn btn-warning mb-3">Seçimi göstər</button>
+                        <button type="submit" class="filter-button btnRangePrice btn btn-warning mb-3">Seçimi göstər</button>
                     </div>
                 </div>
             </div>
@@ -126,15 +346,15 @@
         </div>
     </div>
     @*<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pagedList pagination">
-                    
-                    @Html.PagedListPager(Model, Page => Url.Action("Product", "Product", new { Page }), PagedListRenderOptions.Classic)
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pagedList pagination">
+
+                        @Html.PagedListPager(Model, Page => Url.Action("Product", "Product", new { Page }), PagedListRenderOptions.Classic)
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>*@
+        </div>*@
 </section>
 
 
@@ -146,6 +366,22 @@
 
     <script src="~/FrontPublic/js/shop.js"></script>
     <script type="text/javascript">
+            
+    /*---slider-range here---*/
+    var $sliderRange = $( "#slider-range" );
+    $sliderRange.slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 0, 500 ],
+        slide: function( event, ui ) {
+            $("#amount").val("₼" + ui.values[0] + " - ₼" + ui.values[ 1 ] );
+       }
+    });
+    $( "#amount" ).val( $sliderRange.slider( "values", 0 ) +" ₼"  
+         + " - "+$sliderRange.slider("values", 1)+" ₼");
+
+
         productFilter = {
             catId: $('#catId').val(),
             subcatId: $('#catSubId').val(),
@@ -193,26 +429,26 @@
                     res.forEach(resf => {
                         document.querySelector("#prdcFor").insertAdjacentHTML('beforeend',
                             `
-                            <div class="col-lg-3 col-md-4 col-sm-12 col-12">
-                                <div
-                                    class="shopImg mb-3" style="height:400px;">
-                                    <div class="ImgDiv" style="height:200px">
-                                        <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
-                                    </div>
-                                    <div class="img-text mt-3">
-                                        <span class="pro_name">${resf.Name}</span>
+                                    <div class="col-lg-3 col-md-4 col-sm-12 col-12">
+                                        <div
+                                            class="shopImg mb-3" style="height:400px;">
+                                            <div class="ImgDiv" style="height:200px">
+                                                <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
+                                            </div>
+                                            <div class="img-text mt-3">
+                                                <span class="pro_name">${resf.Name}</span>
 
-                                    </div>
-                                    <p class="pro_price">${resf.Price} AZN</p>
-                                    <input class="hidePId" type="hidden" value="${resf.Id}" />
+                                            </div>
+                                            <p class="pro_price">${resf.Price} AZN</p>
+                                            <input class="hidePId" type="hidden" value="${resf.Id}" />
 
-                                    <div class="">
-                                        <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
-                                    </div>
-                                    </div>
-                                    </div>
+                                            <div class="">
+                                                <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
+                                            </div>
+                                            </div>
+                                            </div>
 
-                                    `)
+                                            `)
                     })
                 }
 

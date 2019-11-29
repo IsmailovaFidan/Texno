@@ -35,7 +35,9 @@ namespace TexnoGallery.Controllers
                 SubCategoryName = db.SubCategories.ToList(),
                 aboutTech = db.AboutUs.FirstOrDefault(),
                 productList = selectPro,
-                marka=db.Markas.Where(pr=>pr.SubCategoryId==subId).OrderByDescending(pr => pr.Id).ToList()                
+                OneCategory=db.Categories.Where(ca=>ca.Id==id).FirstOrDefault(),
+                OneSubCategory=db.SubCategories.Where(sb=>sb.Id==subId).FirstOrDefault(),
+                marka =db.Markas.Where(pr=>pr.SubCategoryId==subId).OrderByDescending(pr => pr.Id).ToList()                
             };
             ViewBag.proMax = db.Products.Where(sb=>sb.SubCategory.Category.Id==id).Max(pr=>pr.Price);
             ViewBag.proMin = db.Products.Where(sb => sb.SubCategory.Category.Id == id).Min(pr => pr.Price);
@@ -64,7 +66,7 @@ namespace TexnoGallery.Controllers
             };
             return View(defaultModel);
         }
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id, int? subId)
         {
             if (id == null)
             {
@@ -77,14 +79,19 @@ namespace TexnoGallery.Controllers
             }
             var defaultModel = new DefaultViewModel
             {
+                productList=db.Products.Where(p=>p.SubCategory.Id==subId).ToList(),
                 CategoryName = db.Categories.ToList(),
                 SubCategoryName = db.SubCategories.ToList(),
                 ProImage = db.ProductImages.Where(pri=>pri.ProductId==id).ToList(),
                 ProductDetail = db.Products.FirstOrDefault(pr => pr.Id == id),
                 //OptionPro=db.ProductOptions.Where(a=>a.Id==id).ToList(),
                 aboutTech = db.AboutUs.FirstOrDefault(),
+                OneCategory = db.Categories.Where(ca => ca.Id == id).FirstOrDefault(),
+                OneSubCategory = db.SubCategories.Where(sb => sb.Id == subId).FirstOrDefault(),
 
             };
+            ViewBag.subId = subId;
+            ViewBag.catId = id;
             return View(defaultModel);
         }
         
