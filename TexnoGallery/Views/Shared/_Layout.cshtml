@@ -155,26 +155,9 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="mini_cart_table">
-                                            <div class="cart_total">
-                                                <span>Sub total:</span>
-                                                <span class="price">$138.00</span>
-                                            </div>
-                                            <div class="cart_total mt-10">
-                                                <span>total:</span>
-                                                <span class="price">$138.00</span>
-                                            </div>
-                                        </div>
+                                        
 
-                                        <div class="mini_cart_footer">
-                                            <div class="cart_button">
-                                                <a href="cart.html">View cart</a>
-                                            </div>
-                                            <div class="cart_button">
-                                                <a href="checkout.html">Checkout</a>
-                                            </div>
-
-                                        </div>
+                                      
 
                                     </div>
                                     <!--mini cart end-->
@@ -469,60 +452,66 @@
         <div class="container">
             <div class="footer_top">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="widgets_container contact_us">
-                            <div class="footer_logo">
-                                <a href="#"><img src="assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                            <div class="footer_contact">
-                                <p>
-                                    We are a team of designers and developers that
-                                    create high quality Magento, Prestashop, Opencart...
-                                </p>
-                                <p><span>Address</span> 4710-4890 Breckinridge St, UK Burlington, VT 05401</p>
-                                <p><span>Need Help?</span>Call: <a href="tel:1-800-345-6789">1-800-345-6789</a></p>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="widgets_container widget_menu">
-                            <h3>Information</h3>
+                            <h3>İnformasiya</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="privacy-policy.html">privacy policy</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Gift Certificates</a></li>
+                                    <li class="pb-4">
+                                        <span class="contact-title"><i class="fas fa-map-marker-alt"></i> Ünvan:</span><br>
+                                        <span>Bakı ş. Azadlıq pr. 47B</span>
+                                    </li>
+                                    <li class="pb-4">
+                                        <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
+                                        <span>+994 (12) 441 22 38;<br>+994 (55) 885-00-86</span><br>
+                                    </li>
+                                 
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widgets_container contact_us">
+
+                            <div class="footer_contact">
+                                <h3>Bizim Haqqımızda</h3>
+                                <p>
+                                    @if (Model.aboutTech.Description.Length > 340)
+                                    {
+                                        @Html.Raw(Model.aboutTech.Description.Substring(0, 340)) <a href="@Url.Action("About","Home")">...</a>
+
+                                    }
+                                    else
+                                    {
+                                        @Html.Raw(Model.aboutTech.Description)
+
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="widgets_container widget_menu">
-                            <h3>Extras</h3>
+                            <h3>Bizi İzləyin</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li><a href="wishlist.html">Wish List</a></li>
-                                    <li><a href="#">Newsletter</a></li>
-                                    <li><a href="#">Affiliate</a></li>
-                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                                    <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i> İnstagram</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="widgets_container">
-                            <h3>Newsletter Subscribe</h3>
-                            <p>We’ll never share your email address with a third-party.</p>
+                            <h3>Abonə Olun</h3>
+                            <p>Yeniliklərdən xəbərdar olmaq üçün abonə olun</p>
                             <div class="subscribe_form">
                                 <form id="mc-form" class="mc-form footer-newsletter">
                                     <input id="mc-email" type="email" autocomplete="off" placeholder="Email..." />
-                                    <button id="mc-submit">Subscribe</button>
+                                    <button id="mc-submit">Abonə Ol</button>
                                 </form>
                                 <!-- mailchimp-alerts Start -->
                                 <div class="mailchimp-alerts text-centre">

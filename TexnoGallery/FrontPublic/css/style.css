@@ -970,7 +970,7 @@ End of the Services
     }
 
 .question .question-btn {
-    background-color: #ffc107;
+    background-color: #ffd54c;
     color: #fff;
     box-shadow: none;
     float: right;
@@ -979,10 +979,7 @@ End of the Services
     transition: transform .3s;
 }
 
-    .question .question-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 2px 5px 10px #111;
-    }
+   
 
 /*
 =============================

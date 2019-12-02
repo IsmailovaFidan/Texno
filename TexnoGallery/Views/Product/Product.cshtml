@@ -169,7 +169,7 @@
                                                 @*<span class="old_price">$3200.00</span>*@
                                             </div>
                                             <div class="add_to_cart">
-                                                <a href="cart.html" title="add to cart" data-action="Add_To_Cart"><span class="fas fa-shopping-cart"></span></a>
+                                                <button href="cart.html" title="add to cart" data-action="Add_To_Cart"><span class="fas fa-shopping-cart"></span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@
                                             @*<span class="old_price">$420.00</span>*@
                                         </div>
                                         <div class="cart_links_btn">
-                                            <a href="#" title="add to cart" data-action="Add_To_Cart">Səbətə Əlavə Et</a>
+                                            <button href="#" title="add to cart" data-action="Add_To_Cart">Səbətə Əlavə Et</button>
                                         </div>
 
                                     </div>
@@ -209,7 +209,7 @@
 
                     </div>
 
-                <div class="shop_toolbar t_bottom">
+                @*<div class="shop_toolbar t_bottom">
                     <div class="pagination">
                         <ul>
                             <li class="current">1</li>
@@ -219,7 +219,7 @@
                             <li><a href="#">>></a></li>
                         </ul>
                     </div>
-                </div>
+                </div>*@
                 <!--shop toolbar end-->
                 <!--shop wrapper end-->
             </div>
@@ -230,18 +230,18 @@
 
 
 
-<section id="Shop" class="mt-5 mb-5">
+@*<section id="Shop" class="mt-5 mb-5">
     <input id="catId" type="hidden" data-catid="subId" value="@catId" />
     <input id="catSubId" type="hidden" data-subcatid="subCatId" value="@subId" />
 
-    <div class="container-fluid">
+    <div class="container-fluid">*@
         @*<div class="col-12 mb-5 mob-filter">
                 <div class="d-flex justify-content-between">
                     <button>Sırala</button>
                     <button>Filter</button>
                 </div>
             </div>*@
-        <div class="row">
+        @*<div class="row">
             <div class="mob-shop-category col-md-4 col-lg-3">
 
                 <div class="ShopCategory">
@@ -312,11 +312,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9">*@
                 @*<a href="@Url.Action("Index","Home")">Ana Səhifə</a>
                     <span>/</span>
                     <a href="@Url.Action("Index","Home")">@Model.CategoryName</a>*@
-                <div id="prdcFor" class="row">
+                @*<div id="prdcFor" class="row">
                     @foreach (var item in Model.productList)
                     {
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6">
@@ -344,7 +344,7 @@
 
             </div>
         </div>
-    </div>
+    </div>*@
     @*<div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -355,7 +355,7 @@
                 </div>
             </div>
         </div>*@
-</section>
+@*</section>*@
 
 
 @section CartJs{
@@ -375,7 +375,7 @@
         max: 500,
         values: [ 0, 500 ],
         slide: function( event, ui ) {
-            $("#amount").val("₼" + ui.values[0] + " - ₼" + ui.values[ 1 ] );
+            $("#amount").val(ui.values[0] + " ₼-" + ui.values[ 1 ] +" ₼");
        }
     });
     $( "#amount" ).val( $sliderRange.slider( "values", 0 ) +" ₼"  

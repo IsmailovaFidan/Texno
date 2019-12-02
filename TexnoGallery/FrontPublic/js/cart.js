@@ -67,19 +67,7 @@ function insertItemToDOM(product) {
  <a href="#"><i class="fas fa-times"></i></a>
 </div>
 </div>
-    //<div class="cart_item">
-    //    <input type="hidden" value=${product.pId}">
-    //  <img class="cart_item_img" src="${product.image}" alt="${product.name}">
-    //  <p class="cart_item_name">${product.name}</p>
-    //  <h4 class="cart_item_price">${(product.totalPrice === 0 ? product.price : product.totalPrice )}</h4>
-    //    <div class="quantity_items">
-    //          <button class="btn  btn-primary btn-sm${(product.quantity === 1 ? ' btn-danger' : '')}" data-action="Decrease_Item">&minus;</button>
-    //          <h5 class="cart_item_quantity">${product.quantity}</h5>
-    //          <button class="btn  btn-primary btn-sm" data-action="Increase_Item">&plus;</button>
-    //    </div>
-    //  <button class="btn btn-danger btn-sm" data-action="Remove_Item">&times;</button>
-
-    //</div>
+  
   `);
     addCartFooter();
 
@@ -100,7 +88,7 @@ cart.forEach(cartItem => {
 });
 
 function handleActionButtons(addToCartButtonDOM, product) {
-    addToCartButtonDOM.innerText = 'Səbətə Əlavə Edildi';
+    //addToCartButtonDOM.innerText = 'Səbətə Əlavə Edildi';
     addToCartButtonDOM.disabled = true;
     const cartItemsDOM = cartDOM.querySelectorAll('.cart_item');
     cartItemsDOM.forEach(cartItemDOM => {
