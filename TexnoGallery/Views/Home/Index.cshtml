@@ -255,14 +255,12 @@
                 <div class="product_carousel product_column5 owl-carousel">
                     @foreach (var item in Model.proPrice)
                     {
-
-
                         <div class="single_product">
                             <div class="product_name">
                                 @if (item.Name.Length > 30)
                                 {
                                     <h3>
-                                        <a class="pro_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
                                             @Html.Raw(item.Name.Substring(0, 25))
                                         </a>
                                     </h3>
@@ -270,26 +268,21 @@
                                 else
                                 {
                                     <h3>
-                                        <a class="pro_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
                                             @Html.Raw(item.Name)
                                         </a>
                                     </h3>
                                 }
-
                                 <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
                             </div>
                             <div class="product_thumb">
-                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="pro_image" src="@item.Image" style="height:100%" alt=""></a>
-
-
-
-
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%;object-fit:contain" alt=""></a>
                             </div>
                             <div class="product_content">
 
                                 <div class="product_footer d-flex align-items-center">
                                     <div class="price_box">
-                                        <span class="regular_price pro_price">@item.Price ₼</span>
+                                        <span class="regular_price prod_price">@item.Price ₼</span>
                                         <input class="hidePId" type="hidden" value="@item.Id" />
                                     </div>
                                     <div class="add_to_cart">
@@ -327,7 +320,7 @@
                                 @if (item.Name.Length > 30)
                                 {
                                     <h3>
-                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                        <a  class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
                                             @Html.Raw(item.Name.Substring(0, 25))
                                         </a>
                                     </h3>
@@ -344,7 +337,7 @@
                                 <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
                             </div>
                             <div class="product_thumb">
-                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%" alt=""></a>
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%;object-fit:contain" alt=""></a>
 
                             </div>
                             <div class="product_content">
@@ -532,7 +525,7 @@
 
 @section CartJs{
 
-    <script src="~/FrontPublic/js/cart.js"></script>
+    <script src="~/FrontPublic/js/maincart.js"></script>
 }
 @section mainJs{
     <script src="~/FrontPublic/js/tilt.jquery.js" type="text/javascript"></script>

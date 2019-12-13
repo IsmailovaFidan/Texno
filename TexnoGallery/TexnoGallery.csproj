@@ -1179,8 +1179,8 @@
     <Content Include="FrontPublic\css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="FrontPublic\css\stylenew.css" />
-    <Content Include="FrontPublic\js\mainnew.js" />
+    <Content Include="FrontPublic\css\sli.css" />
+    <Content Include="FrontPublic\js\mainnew1.js" />
     <Content Include="FrontPublic\js\plugins.js" />
     <Content Include="FrontPublic\js\slick.min.js" />
     <Content Include="Global.asax" />
@@ -1280,7 +1280,7 @@
     <Content Include="FrontPublic\js\about.js" />
     <Content Include="FrontPublic\js\aos.js" />
     <Content Include="FrontPublic\js\bootstrap.js" />
-    <Content Include="FrontPublic\js\cart.js" />
+    <Content Include="FrontPublic\js\maincart.js" />
     <Content Include="FrontPublic\js\checkout.js" />
     <Content Include="FrontPublic\js\easyzoom.min.js" />
     <Content Include="FrontPublic\js\jquery-3.3.1.js" />

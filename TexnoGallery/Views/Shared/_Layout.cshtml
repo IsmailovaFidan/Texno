@@ -24,7 +24,7 @@
     @RenderSection("mainCss", required: false)
     <link rel="stylesheet" href="~/FrontPublic/css/plugins.css" />
 
-    <link rel="stylesheet" href="~/FrontPublic/css/stylenew.css" />
+    <link rel="stylesheet" href="~/FrontPublic/css/sli.css" />
     @*<link rel="stylesheet" href="~/FrontPublic/css/style.css">*@
 </head>
 
@@ -56,30 +56,30 @@
                                 <ul>
                                     <li class="top_links">
                                         <a href="#"><i class="fas fa-user"></i> Mənim Profilim <i class="fas fa-chevron-down"></i></a>
-                                        
-                                            @if (Session["user"] == null)
-                                            {
-                                    <ul class="dropdown_links">
-                                        <li><a href="@Url.Action("Login", "MainAccount")">Daxil Ol</a></li>
-                                        <li><a href="@Url.Action("Register", "MainAccount")"> Qeydiyyatdan Keç</a></li>
-                                        </ul>
+
+                                        @if (Session["user"] == null)
+                                        {
+                                            <ul class="dropdown_links">
+                                                <li><a href="@Url.Action("Login", "MainAccount")">Daxil Ol</a></li>
+                                                <li><a href="@Url.Action("Register", "MainAccount")"> Qeydiyyatdan Keç</a></li>
+                                            </ul>
                                         }
                                         else
                                         {
-                                        var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                @appUser.FirstName
-                                            </button>
-                                            <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
-                                                <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                            var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    @appUser.FirstName
+                                                </button>
+                                                <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                                                    <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                                </div>
                                             </div>
-                                        </div>
                                         }
-                                       
 
-                                  
+
+
                                     </li>
                                     @*<li class="language">
                                             <a href="#"><img src="assets/img/logo/language.png" alt="">en-gb<i class="ion-ios-arrow-down"></i></a>
@@ -139,29 +139,14 @@
                                     <span class="cart_quantity">2</span>
                                     <!--mini cart-->
                                     <div class="mini_cart">
-                                        <div class="carts_item cart-lay-item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">JBL Flip 3 Splasroof Portable Bluetooth 2</a>
+                                        <div class="mini_cart_lay">
 
-                                                <span class="quantity">Qty: 1</span>
-                                                <span class="price_cart">$60.00</span>
 
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
                                         </div>
-                                        
-                                        
-
-                                      
 
                                     </div>
-                                    <!--mini cart end-->
-                                </div>
+                                        <!--mini cart end-->
+                                    </div>
                             </div>
 
                         </div>
@@ -400,24 +385,24 @@
     @Html.Partial("ProductCategory")
     <!--#Header End-->
     @*<div class="bg-modal">
-        <div class="modal-content">
-            <div class="modal-name">
-                <p>SƏBƏT</p>
-            </div>
-            <div class="close-modal">+</div>
-
-            <div class="modal-item">
-                <div class="empty-basket text-center mt-5">
-                    <i style="color:#ffc107" class="fas fa-shopping-basket fa-3x"></i>
-                    <h1 class=" ">Səbət boşdur</h1>
-                    <a class="btn btn-warning" href="@Url.Action("index","Home")">Ana Sehife</a>
-
+            <div class="modal-content">
+                <div class="modal-name">
+                    <p>SƏBƏT</p>
                 </div>
+                <div class="close-modal">+</div>
+
+                <div class="modal-item">
+                    <div class="empty-basket text-center mt-5">
+                        <i style="color:#ffc107" class="fas fa-shopping-basket fa-3x"></i>
+                        <h1 class=" ">Səbət boşdur</h1>
+                        <a class="btn btn-warning" href="@Url.Action("index","Home")">Ana Sehife</a>
+
+                    </div>
+                </div>
+
+
             </div>
-
-
-        </div>
-    </div>*@
+        </div>*@
     @RenderBody()
 
     <!--call to action start-->
@@ -428,7 +413,7 @@
                     <div class="call_action_inner">
                         <div class="call_text">
                             <h3><span>Texnologiya Dünyasına</span> səyahət et!</h3>
-                            
+
                         </div>
                         <div class="discover_now">
                             <a href="#">BAŞLA</a>
@@ -466,7 +451,7 @@
                                         <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
                                         <span>+994 (12) 441 22 38;<br>+994 (55) 885-00-86</span><br>
                                     </li>
-                                 
+
                                 </ul>
                             </div>
                         </div>
@@ -626,13 +611,13 @@
     <script src="~/FrontPublic/js/bootstrap.js"></script>
 
     <script src="~/FrontPublic/js/plugins.js"></script>
-    <script src="~/FrontPublic/js/mainnew.js"></script>
+    <script src="~/FrontPublic/js/mainnew1.js"></script>
     @*<script src="~/FrontPublic/js/main.js"></script>*@
     <script src="~/FrontPublic/js/slick.min.js"></script>
 
+    @RenderSection("mainJS", required: false)
 
     @RenderSection("CartJs", required: false)
-    @RenderSection("mainJS", required: false)
     <script>
         setTimeout(function () {
             $(".loader-bg").fadeToggle();

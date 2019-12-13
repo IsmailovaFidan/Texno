@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Texno Gallery texnologiya dünyası komputerlər, noutbuklar, prosessorlar">
-    <meta name="keywords" content="Pc topla, Komputerlər, noutbuklar, Qulaqlıq, Texnologiya,Sistem bloku, Prosessor, Amd, İntel,Hp">
+    <meta name="keywords" content="Pc topla, Komputerlər, Noutbuklar, Qulaqlıq, Texnologiya,Sistem bloku, Prosessor, Amd, İntel,Hp">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Texno Gallery - TexnoGallery.az</title>
     <link rel="icon" href="~/Uploads/albabaİcon.png" type="image/x-icon">
@@ -15,16 +15,179 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/FrontPublic/css/owl.carousel.css">
     <link rel="stylesheet" href="~/FrontPublic/css/owl.theme.default.min.css">
-    <script src="https://kit.fontawesome.com/a5a64ef4c6.js"></script>
+    <link rel="stylesheet" href="~/FrontPublic/css/slick.css" />
+    <link rel="stylesheet" href="~/FrontPublic/css/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b92fb0384e.js" crossorigin="anonymous"></script>
     @RenderSection("mainCss", required: false)
+    <link rel="stylesheet" href="~/FrontPublic/css/plugins.css" />
 
-    <link rel="stylesheet" href="~/FrontPublic/css/style.css">
+    <link rel="stylesheet" href="~/FrontPublic/css/sli.css" />
+    @*<link rel="stylesheet" href="~/FrontPublic/css/style.css">*@
 </head>
 
 <body>
     <div class="loader-bg">
         <div class="loader"></div>
     </div>
+    <!-- Main Wrapper Start -->
+    <!--header area start-->
+    <header class="header_area">
+        <!--header top start-->
+        <div class="header_top">
+            <div class="container">
+                <div class="top_inner">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="follow_us">
+                                <label>Bizi İzləyin:</label>
+                                <ul class="follow_link">
+                                    <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="top_right text-right">
+                                <ul>
+                                    <li class="top_links">
+                                        <a href="#"><i class="fas fa-user"></i> Mənim Profilim <i class="fas fa-chevron-down"></i></a>
+
+                                        @if (Session["user"] == null)
+                                        {
+                                            <ul class="dropdown_links">
+                                                <li><a href="@Url.Action("Login", "MainAccount")">Daxil Ol</a></li>
+                                                <li><a href="@Url.Action("Register", "MainAccount")"> Qeydiyyatdan Keç</a></li>
+                                            </ul>
+                                        }
+                                        else
+                                        {
+                                            var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    @appUser.FirstName
+                                                </button>
+                                                <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                                                    <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                                                </div>
+                                            </div>
+                                        }
+
+
+
+                                    </li>
+                                    @*<li class="language">
+                                            <a href="#"><img src="assets/img/logo/language.png" alt="">en-gb<i class="ion-ios-arrow-down"></i></a>
+                                            <ul class="dropdown_language">
+                                                <li><a href="#"><img src="assets/img/logo/language.png" alt=""> English</a></li>
+                                                <li><a href="#"><img src="assets/img/logo/language2.png" alt=""> Germany</a></li>
+                                            </ul>
+                                        </li>*@
+                                    @*<li class="currency">
+                                            <a href="#">$ USD<i class="ion-ios-arrow-down"></i></a>
+                                            <ul class="dropdown_currency">
+                                                <li><a href="#">EUR – Euro</a></li>
+                                                <li><a href="#">GBP – British Pound</a></li>
+                                                <li><a href="#">INR – India Rupee</a></li>
+                                            </ul>
+                                        </li>*@
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header top start-->
+        <!--header middel start-->
+        <div class="header_middle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="logo">
+                            <a href="@Url.Action("Index","Home")"><img src="~/images/albaba.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-6">
+                        <div class="middel_right">
+                            <div class="search-container">
+                                <form action="#">
+                                    @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                                    {
+                                        <div class="search_box">
+                                            <input placeholder="Axtarış..." type="text">
+                                            <a href="@Url.Action("SearchPro", "Home")" class="text-center"><i class="fas fa-search mt-2"></i></a>
+                                        </div>
+                                    }
+                                </form>
+                            </div>
+                            <div class="middel_right_info">
+
+                                @*<div class="header_wishlist">
+                                        <a href="wishlist.html"><span class="far fa-heart"></span> Wish list </a>
+                                        <span class="wishlist_quantity">3</span>
+                                    </div>*@
+                                <div class="mini_cart_wrapper">
+                                    <a href="javascript:void(0)"><span class="fas fa-shopping-cart"></span>Səbət </a>
+                                    <span class="cart_quantity">2</span>
+                                    <!--mini cart-->
+                                    <div class="mini_cart">
+                                        <div class="mini_cart_lay">
+
+
+                                        </div>
+
+                                    </div>
+                                        <!--mini cart end-->
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header middel end-->
+        <!--header bottom satrt-->
+        <div class="header_bottom sticky-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="main_menu header_position">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("About","Home")">Haqqımızda</a>
+
+                                    </li>
+
+
+                                    <li>
+                                        <a href="@Url.Action("Contact","Home")">Əlaqə</a>
+
+                                    </li>
+
+                                    <li><a href="@Url.Action("PcTopla","Product")">Pc Topla</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--header bottom end-->
+
+    </header>
+    <!--header area end-->
     <!--# Top Header Start-->
     @*<div class="top-header">
             <div class="container">
@@ -82,23 +245,35 @@
         </div>*@
     <!--# Top Header End-->
     <!--#Header Start-->
-    <div class="site-header-main">
+    @*<div class="site-header-main">
         <nav class="main-nav">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-6 col-lg-2 col-xl-3 pt-3">
+                    <div class="col-sm-7 col-md-8 col-6 col-lg-4 col-xl-4 p-3 d-flex">
+                        <div id="mySidenav" class="sidenav mr-2">
+                            <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeNav()">&times;</a>
+                            <ul>
+                                @foreach (var item in Model.CategoryName)
+                                {
+
+
+                                    <li>
+                                        <a href="@Url.Action("product","product",new { id=item.Id})">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+
+                        <span style="font-size:25px;cursor:pointer" class="spanIcon mr-3 mt-2 " onclick="openNav()">&#9776;</span>
                         <a href="@Url.Action("Index","Home")"><img class="logo-tex" src="~/images/albaba.png" style=" width:200px " alt="logo"></a>
-                    </div><!-- .site-branding -->
-                    <div class="col-lg-10 menu col-xl-9 col-md-3">
-                        <nav class="navbar navbar-expand-lg pt-2 float-right">
+                    </div>
+                    <div class="col-lg-5 menu col-xl-5 text-center">
+                        <nav class="navbar navbar-expand-lg pt-2">
 
 
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav  main-menu">
-                                    <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Index","Home")">
-                                        Ana Səhifə
-                                        <span class="sr-only">(current)</span>
-                                    </a>
+
 
                                     <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("About","Home")">
                                         Haqqımızda <span class="sr-only">(current)</span>
@@ -108,220 +283,360 @@
                                     </a>
                                     <a class="nav-item nav-link text-white menu-a" href="@Url.Action("PcTopla","Product")">
                                         Pc Topla + <span class="sr-only">(current)</span>
-                                    </a>
+                                    </a>*@
 
-                                    <div class="header-cart mr-4" id="cart">
 
-                                        <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
-                                        <div class="items"> <span></span> </div>
-                                    </div>
-                                    <ul class="d-flex mt-2 mr-4 text-white">
-                                        <li class="pr-0"><a class="text-white" href="#">En |</a></li>
-                                        <li class="pr-0"><a class="text-white" href="#">Az |</a></li>
-                                        <li><a class="text-white" href="#">Ru</a></li>
-                                    </ul>
-                                    @if (Session["user"] == null)
+    @*<ul class="d-flex mt-2 mr-4 text-white">
+            <li class="pr-0"><a class="text-white" href="#">En |</a></li>
+            <li class="pr-0"><a class="text-white" href="#">Az |</a></li>
+            <li><a class="text-white" href="#">Ru</a></li>
+        </ul>*@
+    @*@if (Session["user"] == null)
+        {
+            <ul class="d-flex mt-2">
+                <li class="mr-2"><a class="text-white" href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
+                <li><a class="text-white" href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
+            </ul>
+        }
+        else
+        {
+            var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @appUser.FirstName
+                </button>
+                <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
+                    <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
+                </div>
+            </div>
+        }*@
+    @*</div>
+                </div>
+            </nav>
+
+
+
+        </div>*@
+
+    @*<div class="col-xl-3 col-lg-3 col-6 col-sm-5 col-md-4 d-flex align-items-center">
+        @*<a class="wp-contact mt-4 mr-4" href="https://api.whatsapp.com/send?phone=994558850086">
+                <img src="~/images/whatsapp.png" />
+            </a>*@
+    @*<div class="search-head">
+        <i class="fas fa-search"></i>
+        @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+        {<div class="search-box">
+                <input type="text" class="search-input" placeholder="Axtarış..." />
+                <a href="@Url.Action("SearchPro", "Home")">
+                    <i class="fas fa-search"></i>
+                </a>
+
+
+            </div>
+        }*@
+    @*@using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+        {
+            <div class="input-group md-form form-sm form-2 pl-0 search-inp">
+                <input class="form-control search-field " type="text" placeholder="Axtarış..."  id="search" required aria-label="Search" aria-describedby="search" name="searchtext">
+                <div class="input-group-append">
+                    <span class="input-group-text  lighten-3" id="basic-text1">
+                        <a href="@Url.Action("SearchPro", "Home")">
+                            <i class="fas fa-search text-grey"
+                               aria-hidden="true"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        }*@
+    @*</div>
+            <div class="header-cart mr-4" id="cart">
+
+                <a href="#"><i class="fas fa-shopping-cart icofont-cart"></i></a>
+                <div class="items"> <span></span> </div>
+
+            </div>
+
+            <div class="acc-head">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>*@
+
+    <!-- .site-header-menu -->
+    <!-- HeaderIconn -->
+    @*<div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
+        </div>*@
+    <!-- HeaderIconn End-->
+    @*</div>*@<!-- .row -->
+    @*<div class="col-lg-12 pb-3 mt-3 text-center">
+            @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+            {
+                <div class="input-group my-input">
+                    <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
+                    <div class="input-group-append">
+                        <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            }
+        </div>*@
+    @*</div>
+            </nav>
+        </div>*@
+    @Html.Partial("ProductCategory")
+    <!--#Header End-->
+    @*<div class="bg-modal">
+            <div class="modal-content">
+                <div class="modal-name">
+                    <p>SƏBƏT</p>
+                </div>
+                <div class="close-modal">+</div>
+
+                <div class="modal-item">
+                    <div class="empty-basket text-center mt-5">
+                        <i style="color:#ffc107" class="fas fa-shopping-basket fa-3x"></i>
+                        <h1 class=" ">Səbət boşdur</h1>
+                        <a class="btn btn-warning" href="@Url.Action("index","Home")">Ana Sehife</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>*@
+    @RenderBody()
+
+    <!--call to action start-->
+    <section class="call_to_action">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="call_action_inner">
+                        <div class="call_text">
+                            <h3><span>Texnologiya Dünyasına</span> səyahət et!</h3>
+
+                        </div>
+                        <div class="discover_now">
+                            <a href="#">BAŞLA</a>
+                        </div>
+                        <div class="link_follow">
+                            <ul>
+                                <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--call to action end-->
+    <!--footer area start-->
+    <footer class="footer_widgets">
+        <div class="container">
+            <div class="footer_top">
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widgets_container widget_menu">
+                            <h3>İnformasiya</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li class="pb-4">
+                                        <span class="contact-title"><i class="fas fa-map-marker-alt"></i> Ünvan:</span><br>
+                                        <span>Bakı ş. Azadlıq pr. 47B</span>
+                                    </li>
+                                    <li class="pb-4">
+                                        <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
+                                        <span>+994 (12) 441 22 38;<br>+994 (55) 885-00-86</span><br>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widgets_container contact_us">
+
+                            <div class="footer_contact">
+                                <h3>Bizim Haqqımızda</h3>
+                                <p>
+                                    @if (Model.aboutTech.Description.Length > 340)
                                     {
-                                        <ul class="d-flex mt-2">
-                                            <li class="mr-2"><a class="text-white" href="@Url.Action("Login", "MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
-                                            <li><a class="text-white" href="@Url.Action("Register", "MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
-                                        </ul>
+                                        @Html.Raw(Model.aboutTech.Description.Substring(0, 340)) <a href="@Url.Action("About","Home")">...</a>
+
                                     }
                                     else
                                     {
-                                        var appUser = Session["user"] as TexnoGallery.Models.ApplicationUser;
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                @appUser.FirstName
-                                            </button>
-                                            <div class="dropdown-menu mainDropdown" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="@Url.Action("Profiles","MainAccount")">Profile</a>
-                                                <a class="dropdown-item" href="@Url.Action("Logout","MainAccount")">Logout</a>
-                                            </div>
-                                        </div>
+                                        @Html.Raw(Model.aboutTech.Description)
+
                                     }
-                                </div>
-                            </div>
-                        </nav>
-
-
-
-                    </div>
-
-                    <!-- .site-header-menu -->
-                    <!-- HeaderIconn -->
-
-                    <div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
-                        <div id="mySidenav" class="sidenav mr-2">
-                            <a href="javascript:void(0)" class="closebtn mr-3" onclick="closeNav()">&times;</a>
-                            <div class="lang">
-                                <ul>
-                                    <li>
-                                        <a href="#">Az</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">En</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ru</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="log">
-                                <ul>
-                                    <li><a href="@Url.Action("Login","MainAccount")"><i class="fas fa-lock"></i> Login</a></li>
-                                    <li><a href="@Url.Action("Register","MainAccount")"><i class="fas fa-key"></i> Registred</a></li>
-                                </ul>
-                            </div>
-
-                            <a href="@Url.Action("Index","Home")">Ana Səhifə</a>
-                            <a href="@Url.Action("About","Home")">Haqqımızda</a>
-                            <a href="@Url.Action("Contact","Home")">Əlaqə</a>
-                        </div>
-                        <a class="wp-contact mt-4 mr-4" href="https://api.whatsapp.com/send?phone=994558850086">
-                            <img src="~/images/whatsapp.png" />
-                        </a>
-                        <span style="font-size:30px;cursor:pointer" class="spanIcon mr-3 mt-3" onclick="openNav()">&#9776;</span>
-                    </div>
-                    <!-- HeaderIconn End-->
-                </div><!-- .row -->
-                <div class="col-lg-12 pb-3 mt-3 text-center">
-                    @using (Html.BeginForm("searchpro", "home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
-                    {
-                        <div class="input-group my-input">
-                            <input type="search" class="form-control search-field" id="search" required placeholder="search" aria-label="search" aria-describedby="search" name="searchtext">
-                            <div class="input-group-append">
-                                <a href="@Url.Action("SearchPro","Home")" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></a>
+                                </p>
                             </div>
                         </div>
-                    }
-                </div>
-            </div>
-        </nav>
-    </div>
-    @Html.Partial("ProductCategory")
-    <!--#Header End-->
-    <div class="bg-modal">
-        <div class="modal-content">
-            <div class="modal-name">
-                <p>SƏBƏT</p>
-            </div>
-            <div class="close-modal">+</div>
-
-            <div class="modal-item">
-                <div class="empty-basket text-center mt-5">
-                    <i style="color:#ffc107" class="fas fa-shopping-basket fa-3x"></i>
-                    <h1 class=" ">Səbət boşdur</h1>
-                    <a class="btn btn-warning" href="@Url.Action("index","Home")">Ana Sehife</a>
-
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    @RenderBody()
-    <!--Footer-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="footer-contact">
-                        <h5>Əlaqə</h5>
-                        <ul>
-                            <li class="pb-4">
-                                <span class="contact-title"><i class="fas fa-map-marker-alt"></i> Ünvan:</span><br>
-                                <span>Bakı ş. Azadlıq pr. 47B</span>
-                            </li>
-                            <li class="pb-4">
-                                <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
-                                <span>+994 (12) 441 22 38;<br>+994 (55) 885-00-86</span><br>
-                            </li>
-                            <li class="pb-4">
-                                <span class="contact-title"><i class="fas fa-envelope"></i> Email:</span><br>
-                                <span><a href="#">info@texnogallery.az</a></span>
-                            </li>
-                            <li class="pb-3">
-                                <span class="contact-title"><i class="fas fa-clock"></i> İş vaxtı:</span><br>
-                                <span>Həftə içi hər gün / Saat 10:00 - 21:00</span>
-                            </li>
-                        </ul>
-
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widgets_container widget_menu">
+                            <h3>Bizi İzləyin</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                                    <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i> İnstagram</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widgets_container">
+                            <h3>Abonə Olun</h3>
+                            <p>Yeniliklərdən xəbərdar olmaq üçün abonə olun</p>
+                            <div class="subscribe_form">
+                                <form id="mc-form" class="mc-form footer-newsletter">
+                                    <input id="mc-email" type="email" autocomplete="off" placeholder="Email..." />
+                                    <button id="mc-submit">Abonə Ol</button>
+                                </form>
+                                <!-- mailchimp-alerts Start -->
+                                <div class="mailchimp-alerts text-centre">
+                                    <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                    <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                    <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                                </div><!-- mailchimp-alerts end -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <h5>Haqqımızda</h5>
-                    <span>
-                        @if (Model.aboutTech.Description.Length > 800)
-                        {
-                            @Html.Raw(Model.aboutTech.Description.Substring(0, 800))<a href="@Url.Action("About","Home")">[Daha çox...]</a>
-
-                        }
-                        else
-                        {
-                            @Html.Raw(Model.aboutTech.Description)
-
-                        }
-                    </span>
-
-                </div>
-                <div class="col-md-3">
-                    <h5>Bizi İzləyin</h5>
-                    <div class="footer-links ">
-
-                        <ul>
-                            <li class="pb-3">
-                                <a href="https://www.facebook.com/texnogallery28/" target="_blank">
-                                    <img style="width: 28px" src="~/images/facenew.png" alt="">
-                                    <span>Facebook</span>
-                                </a>
-                            </li>
-                            <li class="pb-3">
-                                <a href="https://www.instagram.com/texnogallery/" target="_blank">
-                                    <img style="width: 32px" src="~/images/580b57fcd9996e24bc43c521.png" alt="">
-                                    <span>Instagram</span>
-                                </a>
-                            </li>
-                            <li class="pb-3">
-                                <a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ"
-                                   target="_blank">
-                                    <img style="width: 32px" src="~/images/580b57fcd9996e24bc43c545.png" alt="">
-                                    <span>Youtube</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
             </div>
+            <div class="footer_bottom">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright_area">
+                            <p>Copyright &copy; 2019</p>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="container-fluid footer-line text-center mt-5">
-            <div>&copy;2019 texnogallery.az</div>
-
+                </div>
+            </div>
         </div>
     </footer>
+    <!--footer area end-->
+    <!--Footer-->
+    @*<footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-contact">
+                            <h5>Əlaqə</h5>
+                            <ul>
+                                <li class="pb-4">
+                                    <span class="contact-title"><i class="fas fa-map-marker-alt"></i> Ünvan:</span><br>
+                                    <span>Bakı ş. Azadlıq pr. 47B</span>
+                                </li>
+                                <li class="pb-4">
+                                    <span class="contact-title"><i class="fas fa-phone-alt"></i> Telefon:</span><br>
+                                    <span>+994 (12) 441 22 38;<br>+994 (55) 885-00-86</span><br>
+                                </li>
+                                <li class="pb-4">
+                                    <span class="contact-title"><i class="fas fa-envelope"></i> Email:</span><br>
+                                    <span><a href="#">info@texnogallery.az</a></span>
+                                </li>
+                                <li class="pb-3">
+                                    <span class="contact-title"><i class="fas fa-clock"></i> İş vaxtı:</span><br>
+                                    <span>Həftə içi hər gün / Saat 10:00 - 21:00</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5>Haqqımızda</h5>
+                        <span>
+                            @if (Model.aboutTech.Description.Length > 800)
+                            {
+                                @Html.Raw(Model.aboutTech.Description.Substring(0, 800)) <a href="@Url.Action("About","Home")">[Daha çox...]</a>
+
+                            }
+                            else
+                            {
+                                @Html.Raw(Model.aboutTech.Description)
+
+                            }
+                        </span>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Bizi İzləyin</h5>
+                        <div class="footer-links ">
+
+                            <ul>
+                                <li class="pb-3">
+                                    <a href="https://www.facebook.com/texnogallery28/" target="_blank">
+                                        <img style="width: 28px" src="~/images/facenew.png" alt="">
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="pb-3">
+                                    <a href="https://www.instagram.com/texnogallery/" target="_blank">
+                                        <img style="width: 32px" src="~/images/580b57fcd9996e24bc43c521.png" alt="">
+                                        <span>Instagram</span>
+                                    </a>
+                                </li>
+                                <li class="pb-3">
+                                    <a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ"
+                                       target="_blank">
+                                        <img style="width: 32px" src="~/images/580b57fcd9996e24bc43c545.png" alt="">
+                                        <span>Youtube</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="container-fluid footer-line text-center mt-5">
+                <div>&copy;2019 texnogallery.az</div>
+
+            </div>
+        </footer>*@
     <!--End of the Footer-->
 
     <script src="~/FrontPublic/js/jquery-3.3.1.js"></script>
     <script src="~/FrontPublic/js/popper.min.js"></script>
     <script src="~/FrontPublic/js/bootstrap.js"></script>
-    @RenderSection("CartJs", required: false)
+
+    <script src="~/FrontPublic/js/plugins.js"></script>
+    <script src="~/FrontPublic/js/mainnew1.js"></script>
+    @*<script src="~/FrontPublic/js/main.js"></script>*@
+    <script src="~/FrontPublic/js/slick.min.js"></script>
+
     @RenderSection("mainJS", required: false)
+
+    @RenderSection("CartJs", required: false)
     <script>
         setTimeout(function () {
             $(".loader-bg").fadeToggle();
-        }, 1500);
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
+        }, 1000);
+        //function openNav() {
+        //    document.getElementById("mySidenav").style.width = "70%";
+        //    document.getElementsByTagName("body").style.background = "rgba(0,0,0,0.4)";
 
-        }
+        //}
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
+        //function closeNav() {
+        //    document.getElementById("mySidenav").style.width = "0";
+        //}
+        //$(".searchbtn").click(function () {
+        //    $(this).toggleClass("bg-yellow");
+        //    $(".search-input").focus().toggleClass("active-width");
+        //    $(".header-cart").toggleClass("dont-show");
+        //    $(".acc-head").toggleClass("dont-show");
+        //})
     </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

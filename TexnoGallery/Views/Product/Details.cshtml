@@ -16,40 +16,40 @@
 
 
 @*<div class="breadcrumbs_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul>
-                        <li><a href="@Url.Action("Index","Home")">Ana Səhifə</a></li>
-                        <li>
-                            <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_content">
+                        <ul>
+                            <li><a href="@Url.Action("Index","Home")">Ana Səhifə</a></li>
+                            <li>
+                                <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">
 
-                                @Model.ProductDetail.SubCategory.Category.Name
-                            </a>
-                        </li>
+                                    @Model.ProductDetail.SubCategory.Category.Name
+                                </a>
+                            </li>
 
-                        <li>
-                            <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">
-                                @Model.ProductDetail.SubCategory.Name
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Details","Product")">
-                                @Model.ProductDetail.Name
-                            </a>
-                        </li>
-
-
+                            <li>
+                                <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">
+                                    @Model.ProductDetail.SubCategory.Name
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Details","Product")">
+                                    @Model.ProductDetail.Name
+                                </a>
+                            </li>
 
 
 
-                    </ul>
+
+
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 <!--product details start-->
 <div class="product_details mt-20">
     <div class="container">
@@ -57,9 +57,9 @@
             <div class="col-lg-6 col-md-6">
                 <div class="product-details-tab">
 
-                    <div id="img-1" class="zoomWrapper single-zoom">
-                        <a href="@Model.ProductDetail.Image">
-                            <img id="zoom1" src="@Model.ProductDetail.Image" data-zoom-image="@Model.ProductDetail.Image" alt="big-1">
+                    <div id="img-1" class="single_product">
+                        <a href="#">
+                            <img style="object-fit:contain" class="prod_image" id="zoom1" src="@Model.ProductDetail.Image" data-zoom-image="@Model.ProductDetail.Image" alt="big-1">
                         </a>
                     </div>
 
@@ -116,13 +116,13 @@
                         </div>
 
                         @*<div class="product_meta">
-                            <span>
-                                Category:
-                                <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">@Model.ProductDetail.SubCategory.Category.Name /</a>
-                                <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">@Model.ProductDetail.SubCategory.Name</a>
+                                <span>
+                                    Category:
+                                    <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">@Model.ProductDetail.SubCategory.Category.Name /</a>
+                                    <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">@Model.ProductDetail.SubCategory.Name</a>
 
-                            </span>
-                        </div>*@
+                                </span>
+                            </div>*@
 
                     </form>
 
@@ -320,7 +320,7 @@
     </div>*@
 @section CartJs{
 
-    <script src="~/FrontPublic/js/cart.js"></script>
+    <script src="~/FrontPublic/js/maincart.js"></script>
 }
 @section mainJS{
 
@@ -336,41 +336,40 @@
 
         });
 
-                // Setup toggles example
-                //$(document).ready(function () {
-                //    $(".sld").magnificPopup({
-                //        delegate: 'a',
-                //        type: 'image',
-                //        tLoading: 'Loading image #%curr%...',
-                //        mainClass: 'mfp-img-mobile',
-                //        gallery: {
-                //            enabled: true,
-                //            navigateByImgClick: true,
-                //            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                //        },
-                //        image: {
-                //            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                //            titleSrc: function (item) {
-                //                return item.el.attr('title') + '<small>by Texno Gallery</small>';
-                //            }
-                //        }
-                //    });
-                //});
-                //$('.toggle').on('click', function () {
-                //    var $this = $(this);
+        $(document).ready(function () {
+            $(".s-tab-zoom").magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function (item) {
+                        return item.el.attr('title') + '<small>by Texno Gallery</small>';
+                    }
+                }
+            });
+        });
+        $('.toggle').on('click', function () {
+            var $this = $(this);
 
-                //    if ($this.data("active") === true) {
-                //        $this.text("Switch on").data("active", false);
-                //        api2.teardown();
-                //    } else {
-                //        $this.text("Switch off").data("active", true);
-                //        api2._init();
-                //    }
-                //});
-                //$(".bxSlide-img").on("click", function () {
-                //    var imgSlide = $(this).find("img").attr('src');
-                //    $(".bigImg").find("img").attr("src", imgSlide)
-                //    $(".bigImg").find("a").attr("href", imgSlide)
-                //})
+            if ($this.data("active") === true) {
+                $this.text("Switch on").data("active", false);
+                api2.teardown();
+            } else {
+                $this.text("Switch off").data("active", true);
+                api2._init();
+            }
+        });
+        $(".bxSlide-img").on("click", function () {
+            var imgSlide = $(this).find("img").attr('src');
+            $(".bigImg").find("img").attr("src", imgSlide)
+            $(".bigImg").find("a").attr("href", imgSlide)
+        })
     </script>
 }

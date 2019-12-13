@@ -1,260 +1,420 @@
 ﻿@using TexnoGallery.ViewModel.Default
 @model DefaultViewModel
+@section mainCss{
+    <link rel="stylesheet" href="~/FrontPublic/css/style.css" />
+}
+
+<!--Offcanvas menu area start-->
+<div class="off_canvars_overlay"></div>
+<div class="Offcanvas_menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="canvas_open">
+                    <span>MENU</span>
+                    <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="Offcanvas_menu_wrapper">
+
+                    <div class="canvas_close">
+                        <a href="#"><i class="fas fa-times"></i></a>
+                    </div>
 
 
+                    <div class="top_right text-right">
+                        <ul>
+                            <li class="top_links">
+                                <a href="#"><i class="fas fa-user"></i> Mənim Profilim <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown_links">
+                                    <li><a href="checkout.html">Sifarişlər </a></li>
+                                    <li><a href="my-account.html">Mənim Profilim </a></li>
+                                    <li><a href="cart.html">Səbət</a></li>
+
+                                </ul>
+                            </li>
+                            @*<li class="language">
+                                    <a href="#"><img src="assets/img/logo/language.png" alt="">en-gb<i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="dropdown_language">
+                                        <li><a href="#"><img src="assets/img/logo/language.png" alt=""> English</a></li>
+                                        <li><a href="#"><img src="assets/img/logo/language2.png" alt=""> Germany</a></li>
+                                    </ul>
+                                </li>*@
+                            @*<li class="currency">
+                                    <a href="#">$ USD<i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="dropdown_currency">
+                                        <li><a href="#">EUR – Euro</a></li>
+                                        <li><a href="#">GBP – British Pound</a></li>
+                                        <li><a href="#">INR – India Rupee</a></li>
+                                    </ul>
+                                </li>*@
+
+
+                        </ul>
+                    </div>
+                    <div class="Offcanvas_follow">
+                        <label>Bizi izlə:</label>
+                        <ul class="follow_link">
+                            <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="search-container">
+                        <form action="#">
+                            @using (Html.BeginForm("SearchPro", "Home", FormMethod.Get, new { encytpe = "multipart/form-data", @class = "search-form d-flex justify-content-center" }))
+                            {
+                                <div class="search_box">
+                                    <input placeholder="Axtarış ..." type="text">
+                                    <a href="@Url.Action("SearchPro", "Home")"><i class="fas fa-search mt-2"></i></a>
+                                </div>
+                            }
+                        </form>
+                    </div>
+                    <div id="menu" class="text-left ">
+                        <ul class="offcanvas_main_menu">
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("About","Home")">Haqqımızda</a>
+
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("Contact","Home")">Əlaqə</a>
+
+
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="@Url.Action("PcTopla","Product")">Pc Topla</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Offcanvas menu area end-->
 <!--Slider-->
 @*<section id="container">
-    <div id="slider-container">
-        <ul class="images-container">
-            @foreach (var slideItem in Model.SlideImage)
-            {
-                <li>
-                    <img class="slide-img" src="@slideItem.SlideImg">
-                </li>
-            }
-
-
-        </ul>
-        <span class="arrow a-left"></span>
-        <span class="arrow a-right"></span>
-        <div class='bullets-container'></div>
-    </div>
-</section>*@
-<div class="container-fluid">
-    <div class="mob-category mt-2 mb-2">
-        <button id="mob-categ">Məhsul Kataloqu</button>
-        <div class="mob-all-categ">
-            <ul class="mob-categ-ul">
-                @foreach (var item in Model.CategoryName)
+        <div id="slider-container">
+            <ul class="images-container">
+                @foreach (var slideItem in Model.SlideImage)
                 {
-                    <li class="mob-categ-li">@item.Name
-                        <ul class="mob-sub-categ">
+                    <li>
+                        <img class="slide-img" src="@slideItem.SlideImg">
+                    </li>
+                }
 
-                            <p class="mt-2" style="color:#ffc107;">@item.Name</p>
-                            @foreach (var subitem in item.SubCategories)
+
+            </ul>
+            <span class="arrow a-left"></span>
+            <span class="arrow a-right"></span>
+            <div class='bullets-container'></div>
+        </div>
+    </section>*@
+
+
+<section class="slider_section mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <div class="categories_menu">
+                    <div class="categories_title">
+                        <i class="fas fa-bars first-categ"></i>
+                        <h2 class="categori_toggle">Kateqoriyalar</h2>
+                        <i class="fas fa-chevron-up last-categ"></i>
+                    </div>
+                    <div class="categories_menu_toggle">
+                        <ul>
+                            @foreach (var item in Model.CategoryName)
                             {
-                                <li>
-                                    <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id})">@subitem.Name</a>
+                                <li class="menu_item_children menu-item-children categorie_list">
+                                    <a href="@Url.Action("product","product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.Name <i class="fas fa-chevron-right float-right mt-3"></i></a>
+                                    <ul class="categories_mega_menu">
+                                        @foreach (var subitem in item.SubCategories)
+                                        {
+
+
+                                            <li class="menu_item_children">
+                                                <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id,title=Html.ClearnUrl(item.Name)})">@subitem.Name</a>
+                                                @*<ul class="categorie_sub_menu">
+                                                        <li><a href="#">Bower</a></li>
+                                                        <li><a href="#">Flipbac</a></li>
+                                                        <li><a href="#">Gary Fong</a></li>
+                                                        <li><a href="#">GigaPan</a></li>
+                                                    </ul>*@
+                                            </li>
+
+                                        }
+
+                                    </ul>
                                 </li>
                             }
+                            <li class="menu_item_children categorie_list">
+                                <a href="@Url.Action("PcTopla","Product")">Pc Topla</a>
+                            </li>
                         </ul>
-                </li>
-                }
-                <li>Pc Topla</li>
-                </ul>
-        </div>
-    </div>
-</div>
-<div class="container-fluid mt-4">
-    <div class="row">
-        <div class="col-lg-3 col-xl-2 mt-3">
-            <div class="category">
-                <ul class="main-categ">
-                    @foreach (var item in Model.CategoryName)
-                    {
-                        <li class="categ-li">
-                            <a href="@Url.Action("product","product",new { id=item.Id})" >@item.Name</a>
-                            <ul class="sub_categ">
-                                <h5 class="text-center mt-2" style="color:#ffc107; font-weight:700">@item.Name</h5>
-                                @foreach (var subitem in item.SubCategories)
-                                {  
-                                <li>
-                                    <a href="@Url.Action("product","product",new { subId=subitem.Id,id=item.Id})">* @subitem.Name</a>
-                                </li>
-                                }
-                                </ul>
-                        </li>
-                    }
-                <li class="categ-li">
-                    <a href="@Url.Action("pctopla","product")">Pc Topla</a>
-                </li>
-                    </ul>
-            </div>
-        </div>
-        <div class="col-lg-9 col-xl-10">
-            <div class="slider">
-                <div class="slider__wrapper">
-                    @foreach (var slideItem in Model.SlideImage)
-                    {
-                        <div class="slider__item">
-
-                            <img class="slider_img" src="@slideItem.SlideImg" />
-
-                        </div>
-                    }
+                    </div>
                 </div>
-                <a class="slider__control slider__control_left" href="#" role="button"></a>
-                <a class="slider__control slider__control_right" href="#" role="button"></a>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div class="slider">
+                    <div class="slider__wrapper">
+                        @foreach (var slideItem in Model.SlideImage)
+                        {
+                            <div class="slider__item">
+
+                                <img class="slider_img" src="@slideItem.SlideImg" />
+
+                            </div>
+                        }
+                    </div>
+                    <a class="slider__control slider__control_left" href="#" role="button"></a>
+                    <a class="slider__control slider__control_right" href="#" role="button"></a>
+                </div>
+                @*<div class="slider_area owl-carousel">
+                    @foreach (var item in Model.SlideImage)
+                    {
+
+
+                        <div class="single_slider d-flex align-items-center" data-bgimg="@item.SlideImg">*@
+
+                @*<div class="slider_content">
+                        <h2>Top Quality</h2>
+                        <h1>Aftermarket Turbocharger Specialist</h1>
+                        <a class="button" href="shop.html">shopping now</a>
+                    </div>*@
+
+                @*</div>
+                        }
+
+                    </div>*@
             </div>
         </div>
     </div>
-</div>
 
-<!--End of the Slider-->
-<!--Category-->
-<section id="category" class="pc-category">
-    <div class="container-fluid text-center mt-5 mb-5">
+</section>
+<!--shipping area start-->
+<section class="shipping_area mb-50">
+    <div class="container">
+        <div class=" row">
+            <div class="col-12">
+                <div class="shipping_inner">
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/tag.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Sərfəli Qiymət</h2>
+                            <p>Ən son Texnologiyalar ilə</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/shop.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Mağazalarımız</h2>
+                            <p>Fəaliyyət göstərən 3 filial</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/warranty.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Keyfiyyətli Məhsullar</h2>
+                            <p>Tam zəmanətli satış</p>
+                        </div>
+                    </div>
+                    <div class="single_shipping">
+                        <div class="shipping_icone">
+                            <img src="~/images/support.png" alt="">
+                        </div>
+                        <div class="shipping_content">
+                            <h2>Yüksək Xidmət</h2>
+                            <p>Rahat alış-veriş</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--shipping area end-->
+<section class="product_area mb-50">
+    <div class="container-fluid">
         <div class="row">
-            @foreach (var catItem in Model.CategoryName)
-            {
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Xüsusi</strong>Təkliflər</span></h2>
+                </div>
+                <div class="product_carousel product_column5 owl-carousel">
+                    @foreach (var item in Model.proPrice)
+                    {
+                        <div class="single_product">
+                            <div class="product_name">
+                                @if (item.Name.Length > 30)
+                                {
+                                    <h3>
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name.Substring(0, 25))
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name)
+                                        </a>
+                                    </h3>
+                                }
+                                <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
+                            </div>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%;object-fit:contain" alt=""></a>
+                            </div>
+                            <div class="product_content">
 
-                <div class="col-md-4 col-sm-6 col-6 col-lg-3 mb-3">
-                    <a class="text-white " href="@Url.Action("product","Product",new { id=catItem.Id,title=Html.ClearnUrl(catItem.Name)})">
-                        <div class="all-categ" style="background-image: url(@catItem.CategoryImg)">
-                            <div class="categ-content">
-                                <h2>@catItem.Name</h2>
-                                @Html.Raw(@catItem.Description)
+                                <div class="product_footer d-flex align-items-center">
+                                    <div class="price_box">
+                                        <span class="regular_price prod_price">@item.Price ₼</span>
+                                        <input class="hidePId" type="hidden" value="@item.Id" />
+                                    </div>
+                                    <div class="add_to_cart">
+                                        <button href="cart.html" data-action="Add_To_Cart" title="add to cart"><span class="fas fa-shopping-cart"></span></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    }
+
+
+
                 </div>
-            }
+            </div>
         </div>
+
     </div>
 </section>
-<!--End of the Category-->
-<!--Products-->
-<section id="products" class="products mt-5 mb-5">
-    <div class="container">
-        <h2>Yeni Məhsullar</h2>
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price Azn</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
-        <hr>
-    </div>
-
-    <div class="container mt-5">
-        <h2>Endirimli Məhsullar</h2>
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price Azn</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-
-        </div>
-        <hr>
-    </div>
-
-    <div class="container mt-5">
-        <h2>Ən Çox Satılan Məhsullar</h2>
-
-    </div>
-    <div class="container-fluid slide-bord">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var item in Model.productList)
-            {
-                <div class="item">
-                    <a href="@Url.Action("Details","Product",new { id=item.Id})" style="color:black;">
-                        <div class="ImageDiv" style="height:230px;padding:25px;background:#fff">
-                            <img src="@item.Image" alt="Texno" style="height:100%; width:100%;object-fit:contain">
-                        </div>
-                        <div class="slide-title text-center">
-                            <h3>@item.Price Azn</h3>
-                            <p>@item.Name</p>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
-        <hr>
-    </div>
 
 
-
-</section>
-
-<!--Brands-->
-<section id="brands">
-    <div class="container mt-5">
-        <h2>Brendlər</h2>
-
-    </div>
-    <div class="container-fluid slide-bord  mb-5 ">
-        <hr>
-        <div class="owl-carousel owl-theme">
-            @foreach (var BrendPh in Model.BrendPhoto)
-            {
-                <div class="item pl-5" style="width: 150px">
-                    <img class="img-responsive" src="@BrendPh.BrendImg">
-                </div>
-            }
-        </div>
-    </div>
-</section>
-<!--End of the Brands-->
-<!--Statistics-->
-@*<section id="stat" class="stat mb-5">
+<section class="product_area mb-50">
     <div class="container-fluid">
-        <div class="row text-center text-white">
-            <div class="col-md-4">
-                <div class="stat-items">
-                    <i class="fas fa-chart-line"></i>
-                    <h2 class="mt-2 mb-2">
-                        <span class="counter text-center">2500</span>
-                        <span>+</span>
-                    </h2>
-                    <p>Site Visits</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Yeni</strong>Məhsullar</span></h2>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-items">
-                    <i class="far fa-smile-beam"></i>
-                    <h2 class="mt-2 mb-2">
-                        <span class="counter text-center">1720</span>
-                        <span>+</span>
-                    </h2>
-                    <p>Happy Clients</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-items">
-                    <i class="fas fa-chart-line"></i>
-                    <h2 class="mt-2 mb-2">
-                        <span class="counter text-center">2500</span>
-                        <span>+</span>
-                    </h2>
-                    <p>Site Visits</p>
-                </div>
-            </div>
+                <div class="product_carousel product_column5 owl-carousel">
+                    @foreach (var item in Model.productList)
+                    {
 
 
+                        <div class="single_product">
+                            <div class="product_name">
+                                @if (item.Name.Length > 30)
+                                {
+                                    <h3>
+                                        <a  class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name.Substring(0, 25))
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
+                                        <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
+                                            @Html.Raw(item.Name)
+                                        </a>
+                                    </h3>
+                                }
+
+                                <p class="manufacture_product"><a href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.SubCategory.Name</a></p>
+                            </div>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="@item.Image" style="height:100%;object-fit:contain" alt=""></a>
+
+                            </div>
+                            <div class="product_content">
+
+                                <div class="product_footer d-flex align-items-center">
+                                    <div class="price_box">
+                                        <span class="regular_price prod_price">@item.Price ₼</span>
+                                        <input class="hidePId" type="hidden" value="@item.Id" />
+                                    </div>
+                                    <div class="add_to_cart">
+                                        <button data-action="Add_To_Cart" title="add to cart"><span class="fas fa-shopping-cart"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+@*<section class="small_product_area mb-50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title">
+                    <h2><span> <strong>Yeni</strong>Məhsullar</span></h2>
+                </div>
+                <div class="product_carousel small_product product_column3 owl-carousel">
+                    @foreach (var item in Model.productList)
+                    {
+
+
+                        <div class="single_product">
+                            <div class="product_content">
+                                <h3><a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">@item.Name</a></h3>*@
+                                @*<div class="product_ratings">
+                                        <ul>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                            <li><a href="#"><i class="ion-star"></i></a></li>
+                                        </ul>
+                                    </div>*@
+                                @*<div class="price_box">
+                                    <span class="regular_price prod_price">@item.Price ₼</span>
+
+                                </div>
+                            </div>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})"><img class="prod_image" src="~/images/1-19990_pc-laptop-png-hp-pavilion-15-cc129tx.png" alt=""></a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
         </div>
     </div>
 </section>*@
-<!--End of the Statistics-->
-<!--Services-->
-<section id="services">
-    <div class="Services mb-5">
+
+
+
+
+
+
+
+@*<div class="Services mb-5">
         <div class="container-fluid bg-white">
             <div class="row pt-5 pb-5">
                 <div class="col-md-4 col-sm-4">
@@ -293,8 +453,8 @@
 
             </div>
         </div>
-    </div>
-</section>
+    </div>*@
+@*</section>*@
 <!--End of the Services-->
 <!-- map -->
 <section id="map">
@@ -346,254 +506,271 @@
     </div>
 </section>
 <!-- map end -->
+<!--Brands-->
+<section id="brands" class="mt-5 mb-5" >
+
+    <div class="container slide-brands mb-3">
+
+        <div class="owl-carousel owl-theme">
+            @foreach (var BrendPh in Model.BrendPhoto)
+            {
+                <div class="item pl-5" style="width: 130px">
+                    <img class="img-responsive" src="@BrendPh.BrendImg">
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!--End of the Brands-->
+
 @section CartJs{
 
-    <script src="~/FrontPublic/js/cart.js"></script>
+    <script src="~/FrontPublic/js/maincart.js"></script>
 }
 @section mainJs{
     <script src="~/FrontPublic/js/tilt.jquery.js" type="text/javascript"></script>
     @*<script src="~/FrontPublic/js/jquery.counterup.min.js"></script>
-    <script src="~/FrontPublic/js/jquery.waypoints.min.js"></script>*@
+        <script src="~/FrontPublic/js/jquery.waypoints.min.js"></script>*@
     <script src="~/FrontPublic/js/owl.carousel.js" type="text/javascript"></script>
     <script src="~/FrontPublic/js/main.js"></script>
 
 }
 <script>
-   
-     'use strict';
+
+    'use strict';
     var multiItemSlider = (function () {
 
-      function _isElementVisible(element) {
-        var rect = element.getBoundingClientRect(),
-          vWidth = window.innerWidth || doc.documentElement.clientWidth,
-          vHeight = window.innerHeight || doc.documentElement.clientHeight,
-          elemFromPoint = function (x, y) { return document.elementFromPoint(x, y) };
-        if (rect.right < 0 || rect.bottom < 0
-          || rect.left > vWidth || rect.top > vHeight)
-          return false;
-        return (
-          element.contains(elemFromPoint(rect.left, rect.top))
-          || element.contains(elemFromPoint(rect.right, rect.top))
-          || element.contains(elemFromPoint(rect.right, rect.bottom))
-          || element.contains(elemFromPoint(rect.left, rect.bottom))
-        );
-      }
-
-      return function (selector, config) {
-        var
-          _mainElement = document.querySelector(selector), 
-          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), 
-          _sliderItems = _mainElement.querySelectorAll('.slider__item'),
-          _sliderControls = _mainElement.querySelectorAll('.slider__control'), 
-          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), 
-          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), 
-          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
-          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),    
-          _positionLeftItem = 0,
-          _transform = 0,
-          _step = _itemWidth / _wrapperWidth * 100, 
-          _items = [],
-          _interval = 0,
-          _html = _mainElement.innerHTML,
-          _states = [
-            { active: false, minWidth: 0, count: 1 },
-            { active: false, minWidth: 980, count: 2 }
-          ],
-          _config = {
-            isCycling: false, 
-            direction: 'right',
-            interval: 4000, 
-            pause: true 
-          };
-
-        for (var key in config) {
-          if (key in _config) {
-            _config[key] = config[key];
-          }
+        function _isElementVisible(element) {
+            var rect = element.getBoundingClientRect(),
+                vWidth = window.innerWidth || doc.documentElement.clientWidth,
+                vHeight = window.innerHeight || doc.documentElement.clientHeight,
+                elemFromPoint = function (x, y) { return document.elementFromPoint(x, y) };
+            if (rect.right < 0 || rect.bottom < 0
+                || rect.left > vWidth || rect.top > vHeight)
+                return false;
+            return (
+                element.contains(elemFromPoint(rect.left, rect.top))
+                || element.contains(elemFromPoint(rect.right, rect.top))
+                || element.contains(elemFromPoint(rect.right, rect.bottom))
+                || element.contains(elemFromPoint(rect.left, rect.bottom))
+            );
         }
 
-        _sliderItems.forEach(function (item, index) {
-          _items.push({ item: item, position: index, transform: 0 });
-        });
-
-        var _setActive = function () {
-          var _index = 0;
-          var width = parseFloat(document.body.clientWidth);
-          _states.forEach(function (item, index, arr) {
-            _states[index].active = false;
-            if (width >= _states[index].minWidth)
-              _index = index;
-          });
-          _states[_index].active = true;
-        }
-
-        var _getActive = function () {
-          var _index;
-          _states.forEach(function (item, index, arr) {
-            if (_states[index].active) {
-              _index = index;
-            }
-          });
-          return _index;
-        }
-
-        var position = {
-          getItemMin: function () {
-            var indexItem = 0;
-            _items.forEach(function (item, index) {
-              if (item.position < _items[indexItem].position) {
-                indexItem = index;
-              }
-            });
-            return indexItem;
-          },
-          getItemMax: function () {
-            var indexItem = 0;
-            _items.forEach(function (item, index) {
-              if (item.position > _items[indexItem].position) {
-                indexItem = index;
-              }
-            });
-            return indexItem;
-          },
-          getMin: function () {
-            return _items[position.getItemMin()].position;
-          },
-          getMax: function () {
-            return _items[position.getItemMax()].position;
-          }
-        }
-
-        var _transformItem = function (direction) {
-          var nextItem;
-          if (!_isElementVisible(_mainElement)) {
-            return;
-          }
-          if (direction === 'right') {
-            _positionLeftItem++;
-            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
-              nextItem = position.getItemMin();
-              _items[nextItem].position = position.getMax() + 1;
-              _items[nextItem].transform += _items.length * 100;
-              _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
-            }
-            _transform -= _step;
-          }
-          if (direction === 'left') {
-            _positionLeftItem--;
-            if (_positionLeftItem < position.getMin()) {
-              nextItem = position.getItemMax();
-              _items[nextItem].position = position.getMin() - 1;
-              _items[nextItem].transform -= _items.length * 100;
-              _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
-            }
-            _transform += _step;
-          }
-          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
-        }
-
-        var _cycle = function (direction) {
-          if (!_config.isCycling) {
-            return;
-          }
-          _interval = setInterval(function () {
-            _transformItem(direction);
-          }, _config.interval);
-        }
-
-        var _controlClick = function (e) {
-          if (e.target.classList.contains('slider__control')) {
-            e.preventDefault();
-            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
-            _transformItem(direction);
-            clearInterval(_interval);
-            _cycle(_config.direction);
-          }
-        };
-
-        var _handleVisibilityChange = function () {
-          if (document.visibilityState === "hidden") {
-            clearInterval(_interval);
-          } else {
-            clearInterval(_interval);
-            _cycle(_config.direction);
-          }
-        }
-
-        var _refresh = function () {
-          clearInterval(_interval);
-          _mainElement.innerHTML = _html;
-          _sliderWrapper = _mainElement.querySelector('.slider__wrapper');
-          _sliderItems = _mainElement.querySelectorAll('.slider__item');
-          _sliderControls = _mainElement.querySelectorAll('.slider__control');
-          _sliderControlLeft = _mainElement.querySelector('.slider__control_left');
-          _sliderControlRight = _mainElement.querySelector('.slider__control_right');
-          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width);
-          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width);
-          _positionLeftItem = 0;
-          _transform = 0;
-          _step = _itemWidth / _wrapperWidth * 100;
-          _items = [];
-          _sliderItems.forEach(function (item, index) {
-            _items.push({ item: item, position: index, transform: 0 });
-          });
-        }
-
-        var _setUpListeners = function () {
-          _mainElement.addEventListener('click', _controlClick);
-          if (_config.pause && _config.isCycling) {
-            _mainElement.addEventListener('mouseenter', function () {
-              clearInterval(_interval);
-            });
-            _mainElement.addEventListener('mouseleave', function () {
-              clearInterval(_interval);
-              _cycle(_config.direction);
-            });
-          }
-          document.addEventListener('visibilitychange', _handleVisibilityChange, false);
-          window.addEventListener('resize', function () {
+        return function (selector, config) {
             var
-              _index = 0,
-              width = parseFloat(document.body.clientWidth);
-            _states.forEach(function (item, index, arr) {
-              if (width >= _states[index].minWidth)
-                _index = index;
-            });
-            if (_index !== _getActive()) {
-              _setActive();
-              _refresh();
+                _mainElement = document.querySelector(selector),
+                _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
+                _sliderItems = _mainElement.querySelectorAll('.slider__item'),
+                _sliderControls = _mainElement.querySelectorAll('.slider__control'),
+                _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
+                _sliderControlRight = _mainElement.querySelector('.slider__control_right'),
+                _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
+                _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),
+                _positionLeftItem = 0,
+                _transform = 0,
+                _step = _itemWidth / _wrapperWidth * 100,
+                _items = [],
+                _interval = 0,
+                _html = _mainElement.innerHTML,
+                _states = [
+                    { active: false, minWidth: 0, count: 1 },
+                    { active: false, minWidth: 980, count: 2 }
+                ],
+                _config = {
+                    isCycling: false,
+                    direction: 'right',
+                    interval: 4000,
+                    pause: true
+                };
+
+            for (var key in config) {
+                if (key in _config) {
+                    _config[key] = config[key];
+                }
             }
-          });
-        }
 
-        _setUpListeners();
-        if (document.visibilityState === "visible") {
-          _cycle(_config.direction);
-        }
-        _setActive();
+            _sliderItems.forEach(function (item, index) {
+                _items.push({ item: item, position: index, transform: 0 });
+            });
 
-        return {
-          right: function () { 
-            _transformItem('right');
-          },
-          left: function () { 
-            _transformItem('left');
-          },
-          stop: function () { 
-            _config.isCycling = false;
-            clearInterval(_interval);
-          },
-          cycle: function () { 
-            _config.isCycling = true;
-            clearInterval(_interval);
-            _cycle();
-          }
-        }
+            var _setActive = function () {
+                var _index = 0;
+                var width = parseFloat(document.body.clientWidth);
+                _states.forEach(function (item, index, arr) {
+                    _states[index].active = false;
+                    if (width >= _states[index].minWidth)
+                        _index = index;
+                });
+                _states[_index].active = true;
+            }
 
-      }
+            var _getActive = function () {
+                var _index;
+                _states.forEach(function (item, index, arr) {
+                    if (_states[index].active) {
+                        _index = index;
+                    }
+                });
+                return _index;
+            }
+
+            var position = {
+                getItemMin: function () {
+                    var indexItem = 0;
+                    _items.forEach(function (item, index) {
+                        if (item.position < _items[indexItem].position) {
+                            indexItem = index;
+                        }
+                    });
+                    return indexItem;
+                },
+                getItemMax: function () {
+                    var indexItem = 0;
+                    _items.forEach(function (item, index) {
+                        if (item.position > _items[indexItem].position) {
+                            indexItem = index;
+                        }
+                    });
+                    return indexItem;
+                },
+                getMin: function () {
+                    return _items[position.getItemMin()].position;
+                },
+                getMax: function () {
+                    return _items[position.getItemMax()].position;
+                }
+            }
+
+            var _transformItem = function (direction) {
+                var nextItem;
+                if (!_isElementVisible(_mainElement)) {
+                    return;
+                }
+                if (direction === 'right') {
+                    _positionLeftItem++;
+                    if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
+                        nextItem = position.getItemMin();
+                        _items[nextItem].position = position.getMax() + 1;
+                        _items[nextItem].transform += _items.length * 100;
+                        _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+                    }
+                    _transform -= _step;
+                }
+                if (direction === 'left') {
+                    _positionLeftItem--;
+                    if (_positionLeftItem < position.getMin()) {
+                        nextItem = position.getItemMax();
+                        _items[nextItem].position = position.getMin() - 1;
+                        _items[nextItem].transform -= _items.length * 100;
+                        _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+                    }
+                    _transform += _step;
+                }
+                _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+            }
+
+            var _cycle = function (direction) {
+                if (!_config.isCycling) {
+                    return;
+                }
+                _interval = setInterval(function () {
+                    _transformItem(direction);
+                }, _config.interval);
+            }
+
+            var _controlClick = function (e) {
+                if (e.target.classList.contains('slider__control')) {
+                    e.preventDefault();
+                    var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+                    _transformItem(direction);
+                    clearInterval(_interval);
+                    _cycle(_config.direction);
+                }
+            };
+
+            var _handleVisibilityChange = function () {
+                if (document.visibilityState === "hidden") {
+                    clearInterval(_interval);
+                } else {
+                    clearInterval(_interval);
+                    _cycle(_config.direction);
+                }
+            }
+
+            var _refresh = function () {
+                clearInterval(_interval);
+                _mainElement.innerHTML = _html;
+                _sliderWrapper = _mainElement.querySelector('.slider__wrapper');
+                _sliderItems = _mainElement.querySelectorAll('.slider__item');
+                _sliderControls = _mainElement.querySelectorAll('.slider__control');
+                _sliderControlLeft = _mainElement.querySelector('.slider__control_left');
+                _sliderControlRight = _mainElement.querySelector('.slider__control_right');
+                _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width);
+                _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width);
+                _positionLeftItem = 0;
+                _transform = 0;
+                _step = _itemWidth / _wrapperWidth * 100;
+                _items = [];
+                _sliderItems.forEach(function (item, index) {
+                    _items.push({ item: item, position: index, transform: 0 });
+                });
+            }
+
+            var _setUpListeners = function () {
+                _mainElement.addEventListener('click', _controlClick);
+                if (_config.pause && _config.isCycling) {
+                    _mainElement.addEventListener('mouseenter', function () {
+                        clearInterval(_interval);
+                    });
+                    _mainElement.addEventListener('mouseleave', function () {
+                        clearInterval(_interval);
+                        _cycle(_config.direction);
+                    });
+                }
+                document.addEventListener('visibilitychange', _handleVisibilityChange, false);
+                window.addEventListener('resize', function () {
+                    var
+                        _index = 0,
+                        width = parseFloat(document.body.clientWidth);
+                    _states.forEach(function (item, index, arr) {
+                        if (width >= _states[index].minWidth)
+                            _index = index;
+                    });
+                    if (_index !== _getActive()) {
+                        _setActive();
+                        _refresh();
+                    }
+                });
+            }
+
+            _setUpListeners();
+            if (document.visibilityState === "visible") {
+                _cycle(_config.direction);
+            }
+            _setActive();
+
+            return {
+                right: function () {
+                    _transformItem('right');
+                },
+                left: function () {
+                    _transformItem('left');
+                },
+                stop: function () {
+                    _config.isCycling = false;
+                    clearInterval(_interval);
+                },
+                cycle: function () {
+                    _config.isCycling = true;
+                    clearInterval(_interval);
+                    _cycle();
+                }
+            }
+
+        }
     }());
 
     var slider = multiItemSlider('.slider', {
-      isCycling: true
+        isCycling: true
     })
 </script>
