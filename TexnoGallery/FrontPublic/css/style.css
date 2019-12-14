@@ -777,15 +777,7 @@ End of The Product
 End of The Products
 =============================
 */
-.slide-brands img{
-    opacity:0.5;
-    filter:grayscale(70%);
-    transition:opacity .2s linear;
-}
-.slide-brands img:hover{
-    opacity:1;
-    filter:none;
-}
+
 /*
 =============================
 Statistics

@@ -54,7 +54,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             576:{
 				items:2,
@@ -88,7 +88,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             576:{
 				items:2,
@@ -120,7 +120,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             576:{
 				items:2,
@@ -147,7 +147,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             768:{
 				items:2,
@@ -174,7 +174,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             768:{
 				items:2,
@@ -200,10 +200,10 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             768:{
-				items:1,
+				items:2,
                 margin:0,
 			},
              992:{
@@ -264,7 +264,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             480:{
 				items:2,
@@ -328,7 +328,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             320:{
 				items:2,
@@ -367,7 +367,7 @@
         responsiveClass:true,
 		responsive:{
 				0:{
-				items:1,
+				items:2,
 			},
             250:{
 				items:2,

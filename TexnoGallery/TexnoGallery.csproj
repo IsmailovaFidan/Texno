@@ -328,69 +328,69 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AboutU.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminsTB.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ApplicationUser.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Brend.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Marka.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Option.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PartialClass.cs" />
     <Compile Include="Models\PcTopla.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductImage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductOption.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Question.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Slide.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SubCategory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -1297,15 +1297,15 @@
     <Content Include="FrontPublic\js\prod.js" />
     <Content Include="FrontPublic\js\shop.js" />
     <Content Include="FrontPublic\js\tilt.jquery.js" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>db.edmx</DependentUpon>
+      <LastGenOutput>db.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>db.edmx</DependentUpon>
+      <LastGenOutput>db.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bloodhound.js" />
     <Content Include="Scripts\bloodhound.min.js" />
@@ -1458,12 +1458,12 @@
     <Content Include="Areas\Admin\Views\SubCategories\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SubCategories\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SubCategories\Index.cshtml" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\db.edmx.diagram">
+      <DependentUpon>db.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />

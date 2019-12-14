@@ -15,46 +15,46 @@
 <input id="catSubId" type="hidden" data-subcatid="subCatId" value="@subId" />
 
 
-@*<div class="breadcrumbs_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb_content">
-                        <ul>
-                            <li><a href="@Url.Action("Index","Home")">Ana Səhifə</a></li>
-                            <li>
-                                <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="@Url.Action("Index","Home")">Ana Səhifə</a></li>
+                        <li>
+                            <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">
 
-                                    @Model.ProductDetail.SubCategory.Category.Name
-                                </a>
-                            </li>
+                                @Model.ProductDetail.SubCategory.Category.Name
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">
-                                    @Model.ProductDetail.SubCategory.Name
-                                </a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Details","Product")">
-                                    @Model.ProductDetail.Name
-                                </a>
-                            </li>
-
-
+                        <li>
+                            <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">
+                                @Model.ProductDetail.SubCategory.Name
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Details","Product")">
+                                @Model.ProductDetail.Name
+                            </a>
+                        </li>
 
 
 
-                        </ul>
-                    </div>
+
+
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>*@
+    </div>
+</div>
 <!--product details start-->
 <div class="product_details mt-20">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-5 col-md-5">
                 <div class="product-details-tab">
 
                     <div id="img-1" class="single_product">
@@ -87,17 +87,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
                 <div class="product_d_right">
                     <form action="#">
 
                         <h1>@Model.ProductDetail.Name</h1>
                         @*<div class="product_nav">
-                                <ul>
-                                    <li class="prev"><a href="product-details.html"><i class="fa fa-angle-left"></i></a></li>
-                                    <li class="next"><a href="variable-product.html"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>*@
+                        <ul>
+                            <li class="prev"><a href="product-details.html"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="next"><a href="variable-product.html"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>*@
 
                         <div class="price_box">
                             <span class="current_price">@Model.ProductDetail.Price ₼</span>
@@ -116,18 +116,67 @@
                         </div>
 
                         @*<div class="product_meta">
-                                <span>
-                                    Category:
-                                    <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">@Model.ProductDetail.SubCategory.Category.Name /</a>
-                                    <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">@Model.ProductDetail.SubCategory.Name</a>
+                        <span>
+                            Category:
+                            <a href="@Url.Action("Product","Product",new { catId=Model.ProductDetail.SubCategory.Category.Id})">@Model.ProductDetail.SubCategory.Category.Name /</a>
+                            <a href="@Url.Action("Product","Product",new { subId=Model.ProductDetail.SubCategory.Id})">@Model.ProductDetail.SubCategory.Name</a>
 
-                                </span>
-                            </div>*@
+                        </span>
+                    </div>*@
 
                     </form>
 
 
                 </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <ul>
+                    <li style="border:1px solid #f6f0f0">
+                        <div class="single_shipping1">
+                            <div class="shipping_icone">
+                                <img src="~/images/tag.png" alt="">
+                            </div>
+                            <div class="shipping_content">
+                                <h2>Sərfəli Qiymət</h2>
+                                <p>Ən son Texnologiyalar ilə</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="border:1px solid #f6f0f0" class="mt-2">
+                        <div class="single_shipping1">
+                            <div class="shipping_icone">
+                                <img src="~/images/shop.png" alt="">
+                            </div>
+                            <div class="shipping_content">
+                                <h2>Mağazalarımız</h2>
+                                <p>Fəaliyyət göstərən 3 filial</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="border:1px solid #f6f0f0" class="mt-2">
+                        <div class="single_shipping1">
+                            <div class="shipping_icone">
+                                <img src="~/images/warranty.png" alt="">
+                            </div>
+                            <div class="shipping_content">
+                                <h2>Keyfiyyətli Məhsullar</h2>
+                                <p>Tam zəmanətli satış</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="border:1px solid #f6f0f0" class="mt-2">
+                        <div class="single_shipping1">
+                            <div class="shipping_icone">
+                                <img src="~/images/support.png" alt="">
+                            </div>
+                            <div class="shipping_content">
+                                <h2>Yüksək Xidmət</h2>
+                                <p>Rahat alış-veriş</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>

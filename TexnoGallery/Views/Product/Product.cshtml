@@ -7,8 +7,8 @@
     var catId = ViewBag.catId;
 }
 @section mainCss{
-    <link rel="stylesheet" href="~/FrontPublic/css/shop.css">
-}
+    <link rel="stylesheet" href="~/FrontPublic/css/style.css"/>
+    }
 <input id="catId" type="hidden" data-catid="subId" value="@catId" />
 <input id="catSubId" type="hidden" data-subcatid="subCatId" value="@subId" />
 
@@ -355,11 +355,9 @@
 @*</section>*@
 
 
-@section CartJs{
 
-    <script src="~/FrontPublic/js/maincart.js"></script>
-}
 @section mainJS{
+    <script src="~/FrontPublic/js/maincart.js"></script>
 
     <script src="~/FrontPublic/js/shop.js"></script>
     <script type="text/javascript">
@@ -426,26 +424,26 @@
                     res.forEach(resf => {
                         document.querySelector("#prdcFor").insertAdjacentHTML('beforeend',
                             `
-                                        <div class="col-lg-3 col-md-4 col-sm-12 col-12">
-                                            <div
-                                                class="shopImg mb-3" style="height:400px;">
-                                                <div class="ImgDiv" style="height:200px">
-                                                    <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
-                                                </div>
-                                                <div class="img-text mt-3">
-                                                    <span class="pro_name">${resf.Name}</span>
+                                            <div class="col-lg-3 col-md-4 col-sm-12 col-12">
+                                                <div
+                                                    class="shopImg mb-3" style="height:400px;">
+                                                    <div class="ImgDiv" style="height:200px">
+                                                        <img class="shop-img pro_image" style="height:100%; width:100%" src="${resf.Image}" alt="">
+                                                    </div>
+                                                    <div class="img-text mt-3">
+                                                        <span class="pro_name">${resf.Name}</span>
 
-                                                </div>
-                                                <p class="pro_price">${resf.Price} AZN</p>
-                                                <input class="hidePId" type="hidden" value="${resf.Id}" />
+                                                    </div>
+                                                    <p class="pro_price">${resf.Price} AZN</p>
+                                                    <input class="hidePId" type="hidden" value="${resf.Id}" />
 
-                                                <div class="">
-                                                    <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
-                                                </div>
-                                                </div>
-                                                </div>
+                                                    <div class="">
+                                                        <button type="button" data-action="Add_To_Cart" class="btn btn-warning mb-5  add-to-cart">Səbətə Əlavə Et</button>
+                                                    </div>
+                                                    </div>
+                                                    </div>
 
-                                                `)
+                                                    `)
                     })
                 }
 

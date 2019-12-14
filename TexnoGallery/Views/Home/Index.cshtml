@@ -257,11 +257,11 @@
                     {
                         <div class="single_product">
                             <div class="product_name">
-                                @if (item.Name.Length > 30)
+                                @if (item.Name.Length > 23)
                                 {
                                     <h3>
                                         <a class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
-                                            @Html.Raw(item.Name.Substring(0, 25))
+                                            @Html.Raw(item.Name.Substring(0, 22))...
                                         </a>
                                     </h3>
                                 }
@@ -317,11 +317,11 @@
 
                         <div class="single_product">
                             <div class="product_name">
-                                @if (item.Name.Length > 30)
+                                @if (item.Name.Length > 23)
                                 {
                                     <h3>
                                         <a  class="prod_name" href="@Url.Action("Details","Product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">
-                                            @Html.Raw(item.Name.Substring(0, 25))
+                                            @Html.Raw(item.Name.Substring(0, 22))...
                                         </a>
                                     </h3>
                                 }
@@ -458,50 +458,37 @@
 <!--End of the Services-->
 <!-- map -->
 <section id="map">
-    <div class="container pb-5">
-        <div class="row">
-            <div class="col-md-7" data-aos="fade-right">
-                <div class="mapouter" style="width: 100%">
-                    <div class="gmap_canvas" style="width: 100%">
-                        <iframe style="width:100%" height="500" id="gmap_canvas"
-                                src="https://maps.google.com/maps?q=texno%20gallery&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">Pureblack.de - Webseite erstellen lassen</a>
+    <div class="container pb-5 mt-100">
+        <div class="cover-mini">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>Alış-veriş Et</h3>
+                    <ul >
+                        @foreach (var item in Model.CategoryName)
+                        {
+                            <li>
+                                <a href="@Url.Action("product","product",new { id=item.Id,title=Html.ClearnUrl(item.Name)})">* @item.Name</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+                <div class="col-lg-6 mini-resp">
+                    <img src="~/images/Gaming-Computer-PNG-Photo.png" />
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="call_text">
+
+                        <h3>Yeniliklərdən Xəbərdar Olmaq Üçün Bizi İzlə</h3>
+                        <ul class="mini-cover-ul">
+                            <li><a href="https://www.facebook.com/texnogallery28/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="https://www.instagram.com/texnogallery/" target="_blank"><i class="fab fa-instagram"></i> İnstagram</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=994558850086" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCI3F06OFocdcvv9M1lPA6WQ" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+                        </ul>
                     </div>
-                    <style>
-                        .mapouter {
-                            position: relative;
-                            text-align: right;
-                            height: 500px;
-                            width: 1080px;
-                        }
-
-                        .gmap_canvas {
-                            overflow: hidden;
-                            background: none !important;
-                            height: 500px;
-                            width: 1080px;
-                        }
-                    </style>
                 </div>
             </div>
-            <div class="col-md-5" data-aos="fade-left">
-                <div class="question">
-                    <h4>Bizə Sualınız</h4>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                            <br>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="11"
-                                      placeholder="Message"></textarea>
-                        </div>
-                        <button type="button" class="btn question-btn">Mesaj Göndər</button>
-                    </form>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
